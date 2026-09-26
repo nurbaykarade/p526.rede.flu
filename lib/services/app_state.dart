@@ -45,6 +45,12 @@ class AppState extends ChangeNotifier {
 
   static const _kMultiPerDay = 'multiPerDay';
   static const _kIsPro = 'isPro';
+  static const _kKnown = 'knownIds';
+  static const _kOpenDays = 'openDays';
+  static const _kQuizRounds = 'quizRounds';
+  static const _kQuizAnswered = 'quizAnswered';
+  static const _kQuizCorrect = 'quizCorrect';
+  static const _kQuizBest = 'quizBest';
   static const _kAdDay = 'adDay';
   static const _kAdOpens = 'adDetailOpens';
   static const _kAdShown = 'adInterstitialShown';
@@ -132,6 +138,59 @@ class AppState extends ChangeNotifier {
     notifyListeners();
     await _prefs.setBool(_kMultiPerDay, value);
     onScheduleChanged?.call();
+  }
+
+  // --- Lernen (Pro) ----------------------------------------------------------
+
+  /// Redewendungen, die der Nutzer als „kannte ich schon“ markiert hat.
+  Set<int> get knownIds => (_prefs.getStringList(_kKnown) ?? const [])
+      .map(int.tryParse)
+      .whereType<int>()
+      .toSet();
+
+  bool isKnown(int id) => knownIds.contains(id);
+
+  Future<void> setKnown(int id, bool known) async {
+    final ids = knownIds;
+    known ? ids.add(id) : ids.remove(id);
+    await _prefs.setStringList(_kKnown, ids.map((e) => '$e').toList());
+    notifyListeners();
+  }
+
+  /// Tage, an denen die App geöffnet wurde (yyyy-m-d).
+  Set<String> get openDays => (_prefs.getStringList(_kOpenDays) ?? const []).toSet();
+
+  Future<void> recordOpen(DateTime now) async {
+    final days = openDays;
+    if (!days.add(_day(now))) return;
+    await _prefs.setStringList(_kOpenDays, days.toList());
+    notifyListeners();
+  }
+
+  /// Tage in Folge bis heute (oder bis gestern, wenn heute noch nicht).
+  int streak(DateTime now) {
+    final days = openDays;
+    var d = DateTime(now.year, now.month, now.day);
+    if (!days.contains(_day(d))) d = DateTime(d.year, d.month, d.day - 1);
+    var n = 0;
+    while (days.contains(_day(d))) {
+      n++;
+      d = DateTime(d.year, d.month, d.day - 1);
+    }
+    return n;
+  }
+
+  int get quizRounds => _prefs.getInt(_kQuizRounds) ?? 0;
+  int get quizAnswered => _prefs.getInt(_kQuizAnswered) ?? 0;
+  int get quizCorrect => _prefs.getInt(_kQuizCorrect) ?? 0;
+  int get quizBest => _prefs.getInt(_kQuizBest) ?? 0;
+
+  Future<void> recordQuiz({required int correct, required int total}) async {
+    await _prefs.setInt(_kQuizRounds, quizRounds + 1);
+    await _prefs.setInt(_kQuizAnswered, quizAnswered + total);
+    await _prefs.setInt(_kQuizCorrect, quizCorrect + correct);
+    if (correct > quizBest) await _prefs.setInt(_kQuizBest, correct);
+    notifyListeners();
   }
 
   // --- Werbung: höchstens ein Vollbild-Anzeige pro Tag ----------------------
