@@ -25,3 +25,6 @@ ios/Flutter/flutter_export_environment.sh
 ios/Flutter/ephemeral/
 build_log.txt
 _to_delete/
+
+# Claude Code (persönliche Einstellungen)
+.claude/settings.local.json
