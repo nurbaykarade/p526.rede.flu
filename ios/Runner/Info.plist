@@ -74,5 +74,16 @@
 	<false/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Damit du Redewendungen als Bild in deinen Fotos sichern kannst.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>bq.p526.rede</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>redewendix</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

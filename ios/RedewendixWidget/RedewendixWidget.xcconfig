@@ -1,0 +1,2 @@
+// Versionsnummern (FLUTTER_BUILD_NAME/-NUMBER) wie die App.
+#include? "../Flutter/Generated.xcconfig"
