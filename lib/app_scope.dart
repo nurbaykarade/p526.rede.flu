@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'models/idiom.dart';
 import 'screens/idiom_detail_screen.dart';
+import 'services/ad_service.dart';
 import 'services/app_state.dart';
 import 'services/idiom_repository.dart';
 import 'services/notification_service.dart';
@@ -16,12 +17,14 @@ class AppScope extends InheritedNotifier<AppState> {
     required this.repo,
     required this.notifications,
     required this.pro,
+    required this.ads,
     required super.child,
   }) : super(notifier: state);
 
   final IdiomRepository repo;
   final NotificationService notifications;
   final ProService pro;
+  final AdService ads;
 
   AppState get state => notifier!;
 
@@ -35,10 +38,13 @@ class AppScope extends InheritedNotifier<AppState> {
   static AppScope read(BuildContext context) =>
       context.getInheritedWidgetOfExactType<AppScope>()!;
 
-  /// Öffnet die Detailseite.
+  /// Öffnet die Detailseite (aus der App heraus). Danach darf – selten –
+  /// eine Vollbild-Anzeige kommen.
   static Future<void> openIdiom(BuildContext context, Idiom idiom) async {
+    final ads = read(context).ads;
     await Navigator.of(context).push(MaterialPageRoute<void>(
       builder: (_) => IdiomDetailScreen(idiom: idiom),
     ));
+    await ads.onDetailClosed();
   }
 }
