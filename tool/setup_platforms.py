@@ -159,11 +159,19 @@ PLIST_ENTRIES = """	<key>CFBundleLocalizations</key>
 	<false/>
 """
 
+# „Bild sichern“ im Teilen-Menü braucht diesen Text, sonst stürzt iOS ab.
+PHOTO_ENTRY = """	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Damit du Redewendungen als Bild in deinen Fotos sichern kannst.</string>
+"""
+
 
 def plist(s):
     if "CFBundleLocalizations" not in s:
         idx = s.rfind("</dict>")
         s = s[:idx] + PLIST_ENTRIES + s[idx:]
+    if "NSPhotoLibraryAddUsageDescription" not in s:
+        idx = s.rfind("</dict>")
+        s = s[:idx] + PHOTO_ENTRY + s[idx:]
     s = re.sub(r"(<key>CFBundleDisplayName</key>\s*<string>)[^<]*(</string>)",
                r"\1Redewendix\2", s)
     return s
