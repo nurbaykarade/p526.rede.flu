@@ -67,6 +67,17 @@ class IdiomDetailScreen extends StatelessWidget {
             text: idiom.example,
             italic: true,
           ),
+          if (scope.state.isPro)
+            Align(
+              alignment: Alignment.centerLeft,
+              child: FilterChip(
+                avatar: const Icon(Icons.check, size: 18),
+                showCheckmark: false,
+                label: const Text('Kannte ich schon'),
+                selected: scope.state.isKnown(idiom.id),
+                onSelected: (v) => scope.state.setKnown(idiom.id, v),
+              ),
+            ),
         ],
       ),
     );

@@ -29,11 +29,12 @@ void main() {
       final state = await testState({
         'permissionAsked': true,
         'textScale': 1.3,
+        'isPro': true,
       });
       await tester.pumpWidget(testApp(state: state));
       await tester.pumpAndSettle();
 
-      for (final tab in ['Alle', 'Favoriten', 'Einstellungen', 'Heute']) {
+      for (final tab in ['Alle', 'Lernen', 'Favoriten', 'Einstellungen', 'Heute']) {
         await tester.tap(find.text(tab).last);
         await tester.pumpAndSettle();
       }

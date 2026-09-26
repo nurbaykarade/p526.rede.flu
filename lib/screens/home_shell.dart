@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../app_scope.dart';
 import 'browse_screen.dart';
 import 'favorites_screen.dart';
+import 'learn_screen.dart';
 import 'settings_screen.dart';
 import 'today_screen.dart';
 
@@ -19,6 +20,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   static const _titles = [
     'Redewendix',
     'Alle Redewendungen',
+    'Lernen',
     'Favoriten',
     'Einstellungen',
   ];
@@ -27,6 +29,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    AppScope.read(context).state.recordOpen(DateTime.now());
   }
 
   @override
@@ -42,6 +45,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
       // Benachrichtigungen auffüllen.
       final scope = AppScope.read(context);
       scope.notifications.reschedule(scope.state, scope.repo);
+      scope.state.recordOpen(DateTime.now());
       setState(() {});
     }
   }
@@ -55,6 +59,7 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
         children: const [
           TodayScreen(),
           BrowseScreen(),
+          LearnScreen(),
           FavoritesScreen(),
           SettingsScreen(),
         ],
@@ -72,6 +77,11 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
             icon: Icon(Icons.list_alt_outlined),
             selectedIcon: Icon(Icons.list_alt),
             label: 'Alle',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.school_outlined),
+            selectedIcon: Icon(Icons.school),
+            label: 'Lernen',
           ),
           NavigationDestination(
             icon: Icon(Icons.favorite_border),
