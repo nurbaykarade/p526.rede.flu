@@ -16,20 +16,17 @@ class HomeShell extends StatefulWidget {
 class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   int _index = 0;
 
-  static const _titles = ['Redewendix', 'Alle Redewendungen', 'Favoriten', 'Einstellungen'];
+  static const _titles = [
+    'Redewendix',
+    'Alle Redewendungen',
+    'Favoriten',
+    'Einstellungen',
+  ];
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    // Beim ersten Start direkt nach der Mitteilungs-Erlaubnis fragen.
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      final scope = AppScope.read(context);
-      if (scope.state.permissionAsked) return;
-      await scope.notifications.requestPermission();
-      await scope.state.setPermissionAsked();
-      await scope.notifications.reschedule(scope.state, scope.repo);
-    });
   }
 
   @override
@@ -63,26 +60,30 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
         ],
       ),
       bottomNavigationBar: NavigationBar(
-            selectedIndex: _index,
-            onDestinationSelected: (i) => setState(() => _index = i),
-            destinations: const [
-              NavigationDestination(
-                  icon: Icon(Icons.today_outlined),
-                  selectedIcon: Icon(Icons.today),
-                  label: 'Heute'),
-              NavigationDestination(
-                  icon: Icon(Icons.list_alt_outlined),
-                  selectedIcon: Icon(Icons.list_alt),
-                  label: 'Alle'),
-              NavigationDestination(
-                  icon: Icon(Icons.favorite_border),
-                  selectedIcon: Icon(Icons.favorite),
-                  label: 'Favoriten'),
-              NavigationDestination(
-                  icon: Icon(Icons.settings_outlined),
-                  selectedIcon: Icon(Icons.settings),
-                  label: 'Einstellungen'),
-            ],
+        selectedIndex: _index,
+        onDestinationSelected: (i) => setState(() => _index = i),
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.today_outlined),
+            selectedIcon: Icon(Icons.today),
+            label: 'Heute',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.list_alt_outlined),
+            selectedIcon: Icon(Icons.list_alt),
+            label: 'Alle',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.favorite_border),
+            selectedIcon: Icon(Icons.favorite),
+            label: 'Favoriten',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.settings_outlined),
+            selectedIcon: Icon(Icons.settings),
+            label: 'Einstellungen',
+          ),
+        ],
       ),
     );
   }

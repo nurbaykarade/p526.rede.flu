@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'app_scope.dart';
 import 'screens/home_shell.dart';
 import 'screens/idiom_detail_screen.dart';
+import 'screens/onboarding_screen.dart';
 import 'services/app_state.dart';
 import 'services/idiom_repository.dart';
 import 'services/notification_service.dart';
@@ -20,11 +21,7 @@ Future<void> main() async {
 
   state.onScheduleChanged = () => notifications.reschedule(state, repo);
 
-  runApp(RedewendixApp(
-    state: state,
-    repo: repo,
-    notifications: notifications,
-  ));
+  runApp(RedewendixApp(state: state, repo: repo, notifications: notifications));
 
   unawaited(notifications.reschedule(state, repo));
 }
@@ -55,8 +52,9 @@ class _RedewendixAppState extends State<RedewendixApp> {
     _tapSub = widget.notifications.taps.listen(_openFromNotification);
     final launchId = widget.notifications.launchIdiomId;
     if (launchId != null) {
-      WidgetsBinding.instance
-          .addPostFrameCallback((_) => _openFromNotification(launchId));
+      WidgetsBinding.instance.addPostFrameCallback(
+        (_) => _openFromNotification(launchId),
+      );
     }
   }
 
@@ -64,9 +62,9 @@ class _RedewendixAppState extends State<RedewendixApp> {
     final idiom = widget.repo.byId(idiomId);
     final nav = _navigatorKey.currentState;
     if (idiom == null || nav == null) return;
-    nav.push(MaterialPageRoute<void>(
-      builder: (_) => IdiomDetailScreen(idiom: idiom),
-    ));
+    nav.push(
+      MaterialPageRoute<void>(builder: (_) => IdiomDetailScreen(idiom: idiom)),
+    );
   }
 
   @override
@@ -104,11 +102,22 @@ class _RedewendixAppState extends State<RedewendixApp> {
               child: child!,
             );
           },
-          home: const HomeShell(),
+          home: const _Start(),
         ),
       ),
     );
   }
+}
+
+/// Zeigt beim ersten Start das Onboarding, danach die App.
+class _Start extends StatelessWidget {
+  const _Start();
+
+  @override
+  Widget build(BuildContext context) =>
+      AppScope.of(context).state.onboardingDone
+      ? const HomeShell()
+      : const OnboardingScreen();
 }
 
 ThemeData buildTheme(Brightness brightness) {

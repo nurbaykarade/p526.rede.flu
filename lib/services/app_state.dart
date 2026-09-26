@@ -12,13 +12,18 @@ class AppState extends ChangeNotifier {
         .toSet();
     _notificationsEnabled = _prefs.getBool(_kNotifEnabled) ?? true;
     _permissionAsked = _prefs.getBool(_kPermissionAsked) ?? false;
+    // Wer schon nach Mitteilungen gefragt wurde, kennt die App bereits.
+    _onboardingDone = _prefs.getBool(_kOnboardingDone) ?? _permissionAsked;
     _dailyHour = _prefs.getInt(_kDailyHour) ?? 8;
     _dailyMinute = _prefs.getInt(_kDailyMinute) ?? 0;
     _proStartHour = _prefs.getInt(_kProStart) ?? 8;
     _proEndHour = _prefs.getInt(_kProEnd) ?? 20;
     _proIntervalHours = _prefs.getInt(_kProInterval) ?? 1;
-    _themeMode = ThemeMode.values[
-        (_prefs.getInt(_kThemeMode) ?? 0).clamp(0, ThemeMode.values.length - 1)];
+    _themeMode =
+        ThemeMode.values[(_prefs.getInt(_kThemeMode) ?? 0).clamp(
+          0,
+          ThemeMode.values.length - 1,
+        )];
     _textScale = _prefs.getDouble(_kTextScale) ?? 1.0;
   }
 
@@ -29,6 +34,7 @@ class AppState extends ChangeNotifier {
   static const _kFavorites = 'favorites';
   static const _kNotifEnabled = 'notificationsEnabled';
   static const _kPermissionAsked = 'permissionAsked';
+  static const _kOnboardingDone = 'onboardingDone';
   static const _kDailyHour = 'dailyHour';
   static const _kDailyMinute = 'dailyMinute';
   static const _kProStart = 'proStartHour';
@@ -50,6 +56,7 @@ class AppState extends ChangeNotifier {
   late Set<int> _favorites;
   late bool _notificationsEnabled;
   late bool _permissionAsked;
+  late bool _onboardingDone;
   late int _dailyHour;
   late int _dailyMinute;
   late int _proStartHour;
@@ -63,6 +70,7 @@ class AppState extends ChangeNotifier {
   Set<int> get favorites => Set.unmodifiable(_favorites);
   bool get notificationsEnabled => _notificationsEnabled;
   bool get permissionAsked => _permissionAsked;
+  bool get onboardingDone => _onboardingDone;
   int get dailyHour => _dailyHour;
   int get dailyMinute => _dailyMinute;
   int get proStartHour => _proStartHour;
@@ -77,7 +85,9 @@ class AppState extends ChangeNotifier {
     if (!_favorites.remove(id)) _favorites.add(id);
     notifyListeners();
     await _prefs.setStringList(
-        _kFavorites, _favorites.map((e) => e.toString()).toList());
+      _kFavorites,
+      _favorites.map((e) => e.toString()).toList(),
+    );
   }
 
   Future<void> setMultiPerDay(bool value) async {
@@ -92,6 +102,12 @@ class AppState extends ChangeNotifier {
     _permissionAsked = true;
     notifyListeners();
     await _prefs.setBool(_kPermissionAsked, true);
+  }
+
+  Future<void> setOnboardingDone() async {
+    _onboardingDone = true;
+    notifyListeners();
+    await _prefs.setBool(_kOnboardingDone, true);
   }
 
   Future<void> setNotificationsEnabled(bool value) async {
@@ -110,7 +126,11 @@ class AppState extends ChangeNotifier {
     onScheduleChanged?.call();
   }
 
-  Future<void> setProWindow({int? startHour, int? endHour, int? interval}) async {
+  Future<void> setProWindow({
+    int? startHour,
+    int? endHour,
+    int? interval,
+  }) async {
     _proStartHour = startHour ?? _proStartHour;
     _proEndHour = endHour ?? _proEndHour;
     _proIntervalHours = interval ?? _proIntervalHours;
