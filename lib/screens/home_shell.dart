@@ -22,6 +22,14 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    // Beim ersten Start direkt nach der Mitteilungs-Erlaubnis fragen.
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      final scope = AppScope.read(context);
+      if (scope.state.permissionAsked) return;
+      await scope.notifications.requestPermission();
+      await scope.state.setPermissionAsked();
+      await scope.notifications.reschedule(scope.state, scope.repo);
+    });
   }
 
   @override

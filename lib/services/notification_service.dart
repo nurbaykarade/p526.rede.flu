@@ -136,4 +136,59 @@ class NotificationService {
   }
 
   Future<void> cancelAll() => _plugin.cancelAll();
+
+  // --- Diagnose ---------------------------------------------------------
+
+  /// Ob das System Mitteilungen für die App erlaubt.
+  Future<bool> isPermitted() async {
+    if (Platform.isAndroid) {
+      return await _plugin
+              .resolvePlatformSpecificImplementation<
+                  AndroidFlutterLocalNotificationsPlugin>()
+              ?.areNotificationsEnabled() ??
+          false;
+    }
+    if (Platform.isIOS) {
+      final o = await _plugin
+          .resolvePlatformSpecificImplementation<
+              IOSFlutterLocalNotificationsPlugin>()
+          ?.checkPermissions();
+      return o?.isEnabled ?? false;
+    }
+    return false;
+  }
+
+  Future<int> pendingCount() async =>
+      (await _plugin.pendingNotificationRequests()).length;
+
+  /// Zeigt sofort eine Mitteilung mit der Redewendung des Tages.
+  Future<void> showTestNow(IdiomRepository repo) async {
+    final idiom = repo.forDay(DateTime.now());
+    await _plugin.show(
+      id: 900,
+      title: 'Redewendung des Tages',
+      body: '„${idiom.text}“ – ${idiom.meaning}',
+      notificationDetails: _details,
+      payload: '${idiom.id}',
+    );
+  }
+
+  /// Plant eine Test-Mitteilung in einer Minute (App schließen, Handy sperren).
+  Future<void> scheduleTestInOneMinute(IdiomRepository repo) async {
+    final idiom = repo.forSlot(DateTime.now(), 1);
+    await _plugin.zonedSchedule(
+      id: 901,
+      scheduledDate: tz.TZDateTime.from(
+          DateTime.now().add(const Duration(minutes: 1)), tz.UTC),
+      notificationDetails: _details,
+      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+      title: 'Redewendix (Test)',
+      body: '„${idiom.text}“ – ${idiom.meaning}',
+      payload: '${idiom.id}',
+    );
+  }
+
+  Future<void> openSystemSettings() async {
+    await _plugin.openAppNotificationSettings();
+  }
 }
