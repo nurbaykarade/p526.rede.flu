@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart' show ThemeMode;
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Zentrale App-Einstellungen (Favoriten, Benachrichtigungen).
@@ -16,6 +17,9 @@ class AppState extends ChangeNotifier {
     _proStartHour = _prefs.getInt(_kProStart) ?? 8;
     _proEndHour = _prefs.getInt(_kProEnd) ?? 20;
     _proIntervalHours = _prefs.getInt(_kProInterval) ?? 1;
+    _themeMode = ThemeMode.values[
+        (_prefs.getInt(_kThemeMode) ?? 0).clamp(0, ThemeMode.values.length - 1)];
+    _textScale = _prefs.getDouble(_kTextScale) ?? 1.0;
   }
 
   static Future<AppState> load() async =>
@@ -30,6 +34,11 @@ class AppState extends ChangeNotifier {
   static const _kProStart = 'proStartHour';
   static const _kProEnd = 'proEndHour';
   static const _kProInterval = 'proIntervalHours';
+  static const _kThemeMode = 'themeMode';
+  static const _kTextScale = 'textScale';
+
+  /// Wählbare Schriftgrößen (Faktor zusätzlich zur System-Einstellung).
+  static const textScales = [1.0, 1.15, 1.3];
 
   final SharedPreferences _prefs;
 
@@ -46,6 +55,8 @@ class AppState extends ChangeNotifier {
   late int _proStartHour;
   late int _proEndHour;
   late int _proIntervalHours;
+  late ThemeMode _themeMode;
+  late double _textScale;
 
   /// true = mehrmals täglich im Zeitfenster, false = einmal täglich.
   bool get multiPerDay => _multiPerDay;
@@ -57,6 +68,8 @@ class AppState extends ChangeNotifier {
   int get proStartHour => _proStartHour;
   int get proEndHour => _proEndHour;
   int get proIntervalHours => _proIntervalHours;
+  ThemeMode get themeMode => _themeMode;
+  double get textScale => _textScale;
 
   bool isFavorite(int id) => _favorites.contains(id);
 
@@ -107,5 +120,17 @@ class AppState extends ChangeNotifier {
     await _prefs.setInt(_kProEnd, _proEndHour);
     await _prefs.setInt(_kProInterval, _proIntervalHours);
     onScheduleChanged?.call();
+  }
+
+  Future<void> setThemeMode(ThemeMode mode) async {
+    _themeMode = mode;
+    notifyListeners();
+    await _prefs.setInt(_kThemeMode, mode.index);
+  }
+
+  Future<void> setTextScale(double scale) async {
+    _textScale = scale;
+    notifyListeners();
+    await _prefs.setDouble(_kTextScale, scale);
   }
 }
