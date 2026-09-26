@@ -10,6 +10,7 @@ import 'screens/onboarding_screen.dart';
 import 'services/app_state.dart';
 import 'services/idiom_repository.dart';
 import 'services/notification_service.dart';
+import 'services/widget_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,12 +19,22 @@ Future<void> main() async {
   final state = await AppState.load();
   final notifications = NotificationService();
   await notifications.init();
+  final widgets = WidgetService();
+  await widgets.init();
 
   state.onScheduleChanged = () => notifications.reschedule(state, repo);
 
-  runApp(RedewendixApp(state: state, repo: repo, notifications: notifications));
+  runApp(
+    RedewendixApp(
+      state: state,
+      repo: repo,
+      notifications: notifications,
+      widgets: widgets,
+    ),
+  );
 
   unawaited(notifications.reschedule(state, repo));
+  unawaited(widgets.update(repo));
 }
 
 class RedewendixApp extends StatefulWidget {
@@ -32,11 +43,15 @@ class RedewendixApp extends StatefulWidget {
     required this.state,
     required this.repo,
     required this.notifications,
+    this.widgets,
   });
 
   final AppState state;
   final IdiomRepository repo;
   final NotificationService notifications;
+
+  /// Startbildschirm-Widget; in Tests weggelassen.
+  final WidgetService? widgets;
 
   @override
   State<RedewendixApp> createState() => _RedewendixAppState();
@@ -45,6 +60,8 @@ class RedewendixApp extends StatefulWidget {
 class _RedewendixAppState extends State<RedewendixApp> {
   final _navigatorKey = GlobalKey<NavigatorState>();
   StreamSubscription<int>? _tapSub;
+  StreamSubscription<int>? _widgetTapSub;
+  AppLifecycleListener? _lifecycle;
 
   @override
   void initState() {
@@ -54,6 +71,18 @@ class _RedewendixAppState extends State<RedewendixApp> {
     if (launchId != null) {
       WidgetsBinding.instance.addPostFrameCallback(
         (_) => _openFromNotification(launchId),
+      );
+    }
+
+    final widgets = widget.widgets;
+    if (widgets != null) {
+      _widgetTapSub = widgets.taps.listen(_openFromNotification);
+      widgets.launchIdiomId().then((id) {
+        if (id != null) _openFromNotification(id);
+      });
+      // Beim Zurückkehren in die App: Vorrat des Widgets auffüllen.
+      _lifecycle = AppLifecycleListener(
+        onResume: () => widgets.update(widget.repo),
       );
     }
   }
@@ -70,6 +99,8 @@ class _RedewendixAppState extends State<RedewendixApp> {
   @override
   void dispose() {
     _tapSub?.cancel();
+    _widgetTapSub?.cancel();
+    _lifecycle?.dispose();
     super.dispose();
   }
 
