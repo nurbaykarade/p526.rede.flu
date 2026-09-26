@@ -96,7 +96,7 @@ class NotificationService {
     final now = DateTime.now();
     final slots = computeSchedule(
       now: now,
-      multiPerDay: state.multiPerDay,
+      multiPerDay: state.multiPerDayActive,
       dailyHour: state.dailyHour,
       dailyMinute: state.dailyMinute,
       proStartHour: state.proStartHour,
@@ -121,7 +121,7 @@ class NotificationService {
 
     // Wenn der Vorrat ausläuft (mehrmals täglich, App lange nicht geöffnet),
     // erinnert eine letzte Benachrichtigung daran, die App zu öffnen.
-    if (state.multiPerDay && slots.length >= kMaxScheduled) {
+    if (state.multiPerDayActive && slots.length >= kMaxScheduled) {
       final last = slots.last.time;
       await _plugin.zonedSchedule(
         id: _reminderId,
