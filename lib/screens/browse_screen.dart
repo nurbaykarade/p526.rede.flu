@@ -16,20 +16,14 @@ class _BrowseScreenState extends State<BrowseScreen> {
   @override
   Widget build(BuildContext context) {
     final scope = AppScope.of(context);
-    final q = _query.trim().toLowerCase();
-    final items = scope.repo.sorted
-        .where((i) =>
-            q.isEmpty ||
-            i.text.toLowerCase().contains(q) ||
-            i.meaning.toLowerCase().contains(q))
-        .toList();
+    final items = scope.repo.search(_query);
 
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
           child: SearchBar(
-            hintText: 'Redewendung suchen …',
+            hintText: 'Redewendung oder Bedeutung …',
             leading: const Icon(Icons.search),
             elevation: const WidgetStatePropertyAll(0),
             onChanged: (v) => setState(() => _query = v),
