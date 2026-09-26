@@ -45,6 +45,9 @@ class AppState extends ChangeNotifier {
 
   static const _kMultiPerDay = 'multiPerDay';
   static const _kIsPro = 'isPro';
+  static const _kAdDay = 'adDay';
+  static const _kAdOpens = 'adDetailOpens';
+  static const _kAdShown = 'adInterstitialShown';
   static const _kProGateSeen = 'proGateSeen';
   static const _kMultiGrandfathered = 'multiGrandfathered';
   static const _kFavorites = 'favorites';
@@ -130,6 +133,35 @@ class AppState extends ChangeNotifier {
     await _prefs.setBool(_kMultiPerDay, value);
     onScheduleChanged?.call();
   }
+
+  // --- Werbung: höchstens ein Vollbild-Anzeige pro Tag ----------------------
+
+  /// Wie oft heute eine Detailseite in der App geöffnet wurde.
+  int detailOpensToday(DateTime now) =>
+      _prefs.getString(_kAdDay) == _day(now) ? (_prefs.getInt(_kAdOpens) ?? 0) : 0;
+
+  /// Ob heute schon eine Vollbild-Anzeige kam.
+  bool interstitialShownToday(DateTime now) =>
+      _prefs.getString(_kAdDay) == _day(now) && (_prefs.getBool(_kAdShown) ?? false);
+
+  Future<void> countDetailOpen(DateTime now) async {
+    await _rollAdDay(now);
+    await _prefs.setInt(_kAdOpens, detailOpensToday(now) + 1);
+  }
+
+  Future<void> markInterstitialShown(DateTime now) async {
+    await _rollAdDay(now);
+    await _prefs.setBool(_kAdShown, true);
+  }
+
+  Future<void> _rollAdDay(DateTime now) async {
+    if (_prefs.getString(_kAdDay) == _day(now)) return;
+    await _prefs.setString(_kAdDay, _day(now));
+    await _prefs.setInt(_kAdOpens, 0);
+    await _prefs.setBool(_kAdShown, false);
+  }
+
+  static String _day(DateTime d) => '${d.year}-${d.month}-${d.day}';
 
   Future<void> setPro(bool value) async {
     if (_isPro == value) return;

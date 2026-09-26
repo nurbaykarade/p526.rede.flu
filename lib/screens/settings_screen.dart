@@ -204,6 +204,17 @@ class SettingsScreen extends StatelessWidget {
           ),
         ),
         const Divider(),
+        ListenableBuilder(
+          listenable: scope.ads,
+          builder: (context, _) => scope.ads.privacyOptionsRequired
+              ? ListTile(
+                  leading: const Icon(Icons.privacy_tip_outlined),
+                  title: const Text('Datenschutz-Einstellungen'),
+                  subtitle: const Text('Einwilligung für Werbung ändern'),
+                  onTap: scope.ads.showPrivacyOptions,
+                )
+              : const SizedBox.shrink(),
+        ),
         const AboutListTile(
           icon: Icon(Icons.info_outline),
           applicationName: 'Redewendix',

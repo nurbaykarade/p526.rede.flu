@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
 import '../models/idiom.dart';
+import '../widgets/ad_banner.dart';
 import 'share_screen.dart';
 
 class IdiomDetailScreen extends StatelessWidget {
@@ -38,6 +39,7 @@ class IdiomDetailScreen extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: const AdBanner(),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
         children: [

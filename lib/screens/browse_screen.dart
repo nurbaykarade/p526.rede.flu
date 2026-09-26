@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
+import '../widgets/ad_banner.dart';
 import '../widgets/idiom_tile.dart';
 
 class BrowseScreen extends StatefulWidget {
@@ -38,6 +39,7 @@ class _BrowseScreenState extends State<BrowseScreen> {
                   itemBuilder: (_, i) => IdiomTile(idiom: items[i]),
                 ),
         ),
+        const AdBanner(),
       ],
     );
   }
