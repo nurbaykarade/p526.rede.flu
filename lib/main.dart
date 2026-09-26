@@ -77,29 +77,44 @@ class _RedewendixAppState extends State<RedewendixApp> {
 
   @override
   Widget build(BuildContext context) {
-    const seed = Color(0xFF2F6B5A);
     return AppScope(
       state: widget.state,
       repo: widget.repo,
       notifications: widget.notifications,
-      child: MaterialApp(
-        title: 'Redewendix',
-        navigatorKey: _navigatorKey,
-        debugShowCheckedModeBanner: false,
-        locale: const Locale('de'),
-        supportedLocales: const [Locale('de')],
-        localizationsDelegates: GlobalMaterialLocalizations.delegates,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: seed),
-          useMaterial3: true,
+      child: ListenableBuilder(
+        listenable: widget.state,
+        builder: (context, _) => MaterialApp(
+          title: 'Redewendix',
+          navigatorKey: _navigatorKey,
+          debugShowCheckedModeBanner: false,
+          locale: const Locale('de'),
+          supportedLocales: const [Locale('de')],
+          localizationsDelegates: GlobalMaterialLocalizations.delegates,
+          theme: buildTheme(Brightness.light),
+          darkTheme: buildTheme(Brightness.dark),
+          themeMode: widget.state.themeMode,
+          builder: (context, child) {
+            // Eigene Schriftgröße zusätzlich zur System-Einstellung.
+            final mq = MediaQuery.of(context);
+            final system = mq.textScaler.scale(16) / 16;
+            return MediaQuery(
+              data: mq.copyWith(
+                textScaler: TextScaler.linear(system * widget.state.textScale),
+              ),
+              child: child!,
+            );
+          },
+          home: const HomeShell(),
         ),
-        darkTheme: ThemeData(
-          colorScheme:
-              ColorScheme.fromSeed(seedColor: seed, brightness: Brightness.dark),
-          useMaterial3: true,
-        ),
-        home: const HomeShell(),
       ),
     );
   }
+}
+
+ThemeData buildTheme(Brightness brightness) {
+  const seed = Color(0xFF2F6B5A);
+  return ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: seed, brightness: brightness),
+    useMaterial3: true,
+  );
 }

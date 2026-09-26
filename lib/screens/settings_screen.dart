@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
+import '../services/app_state.dart';
 import '../util/german_date.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -132,6 +133,52 @@ class SettingsScreen extends StatelessWidget {
             },
           ),
         ],
+        const Divider(),
+        const _Header('Darstellung'),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+          child: SegmentedButton<ThemeMode>(
+            segments: const [
+              ButtonSegment(
+                value: ThemeMode.system,
+                label: Text('System'),
+              ),
+              ButtonSegment(
+                value: ThemeMode.light,
+                label: Text('Hell'),
+              ),
+              ButtonSegment(
+                value: ThemeMode.dark,
+                label: Text('Dunkel'),
+              ),
+            ],
+            selected: {state.themeMode},
+            showSelectedIcon: false,
+            onSelectionChanged: (s) => state.setThemeMode(s.first),
+          ),
+        ),
+        const ListTile(
+          leading: Icon(Icons.format_size),
+          title: Text('Schriftgröße'),
+          subtitle: Text('Zusätzlich zur Einstellung des Handys'),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+          child: SegmentedButton<double>(
+            segments: const [
+              ButtonSegment(value: 1.0, label: Text('Normal')),
+              ButtonSegment(value: 1.15, label: Text('Groß')),
+              ButtonSegment(value: 1.3, label: Text('Sehr groß')),
+            ],
+            selected: {
+              AppState.textScales.contains(state.textScale)
+                  ? state.textScale
+                  : 1.0,
+            },
+            showSelectedIcon: false,
+            onSelectionChanged: (s) => state.setTextScale(s.first),
+          ),
+        ),
         const Divider(),
         const AboutListTile(
           icon: Icon(Icons.info_outline),

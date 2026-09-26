@@ -50,13 +50,15 @@ class TodayScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      FilledButton.tonalIcon(
-                        onPressed: () => AppScope.openIdiom(context, idiom),
-                        icon: const Icon(Icons.menu_book_outlined),
-                        label: const Text('Mehr erfahren'),
+                      Flexible(
+                        child: FilledButton.tonalIcon(
+                          onPressed: () => AppScope.openIdiom(context, idiom),
+                          icon: const Icon(Icons.menu_book_outlined),
+                          label: const Text('Mehr erfahren'),
+                        ),
                       ),
-                      const Spacer(),
                       IconButton(
                         tooltip: fav ? 'Aus Favoriten entfernen' : 'Zu Favoriten',
                         icon: Icon(fav ? Icons.favorite : Icons.favorite_border,
