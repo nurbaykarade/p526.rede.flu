@@ -6,6 +6,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 class AppState extends ChangeNotifier {
   AppState._(this._prefs) {
     _multiPerDay = _prefs.getBool(_kMultiPerDay) ?? false;
+    _isPro = _prefs.getBool(_kIsPro) ?? false;
+    // Wer „Mehrmals täglich“ schon vor 1.1 (damals kostenlos) genutzt hat,
+    // behält es auch ohne Pro.
+    if (!(_prefs.getBool(_kProGateSeen) ?? false)) {
+      if (_multiPerDay) _prefs.setBool(_kMultiGrandfathered, true);
+      _prefs.setBool(_kProGateSeen, true);
+    }
+    _multiGrandfathered = _prefs.getBool(_kMultiGrandfathered) ?? false;
     _favorites = (_prefs.getStringList(_kFavorites) ?? const [])
         .map(int.tryParse)
         .whereType<int>()
@@ -36,6 +44,9 @@ class AppState extends ChangeNotifier {
       AppState._(await SharedPreferences.getInstance());
 
   static const _kMultiPerDay = 'multiPerDay';
+  static const _kIsPro = 'isPro';
+  static const _kProGateSeen = 'proGateSeen';
+  static const _kMultiGrandfathered = 'multiGrandfathered';
   static const _kFavorites = 'favorites';
   static const _kNotifEnabled = 'notificationsEnabled';
   static const _kPermissionAsked = 'permissionAsked';
@@ -59,6 +70,8 @@ class AppState extends ChangeNotifier {
   VoidCallback? onScheduleChanged;
 
   late bool _multiPerDay;
+  late bool _isPro;
+  late bool _multiGrandfathered;
   late Set<int> _favorites;
   late bool _notificationsEnabled;
   late bool _permissionAsked;
@@ -72,8 +85,18 @@ class AppState extends ChangeNotifier {
   late ThemeMode _themeMode;
   late double _textScale;
 
-  /// true = mehrmals täglich im Zeitfenster, false = einmal täglich.
+  /// Gewählt: mehrmals täglich im Zeitfenster (true) oder einmal täglich.
   bool get multiPerDay => _multiPerDay;
+
+  /// Redewendix Pro gekauft.
+  bool get isPro => _isPro;
+
+  /// „Mehrmals täglich“ ist Pro – außer für Nutzer, die es schon vor 1.1
+  /// eingeschaltet hatten.
+  bool get canUseMultiPerDay => _isPro || _multiGrandfathered;
+
+  /// Tatsächlich wirksam: gewählt und freigeschaltet.
+  bool get multiPerDayActive => _multiPerDay && canUseMultiPerDay;
   Set<int> get favorites => Set.unmodifiable(_favorites);
   bool get notificationsEnabled => _notificationsEnabled;
   bool get permissionAsked => _permissionAsked;
@@ -105,6 +128,14 @@ class AppState extends ChangeNotifier {
     _multiPerDay = value;
     notifyListeners();
     await _prefs.setBool(_kMultiPerDay, value);
+    onScheduleChanged?.call();
+  }
+
+  Future<void> setPro(bool value) async {
+    if (_isPro == value) return;
+    _isPro = value;
+    notifyListeners();
+    await _prefs.setBool(_kIsPro, value);
     onScheduleChanged?.call();
   }
 

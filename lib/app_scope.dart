@@ -5,6 +5,7 @@ import 'screens/idiom_detail_screen.dart';
 import 'services/app_state.dart';
 import 'services/idiom_repository.dart';
 import 'services/notification_service.dart';
+import 'services/pro_service.dart';
 
 /// Stellt alle Dienste im Widget-Baum bereit. Widgets, die [AppScope.of]
 /// aufrufen, werden bei Änderungen an [AppState] neu gebaut.
@@ -14,11 +15,13 @@ class AppScope extends InheritedNotifier<AppState> {
     required AppState state,
     required this.repo,
     required this.notifications,
+    required this.pro,
     required super.child,
   }) : super(notifier: state);
 
   final IdiomRepository repo;
   final NotificationService notifications;
+  final ProService pro;
 
   AppState get state => notifier!;
 

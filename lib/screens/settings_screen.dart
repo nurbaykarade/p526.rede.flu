@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../app_scope.dart';
 import '../services/app_state.dart';
 import '../util/german_date.dart';
+import 'pro_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -18,6 +19,21 @@ class SettingsScreen extends StatelessWidget {
 
     return ListView(
       children: [
+        ListTile(
+          leading: Icon(
+            state.isPro ? Icons.verified : Icons.workspace_premium_outlined,
+            color: theme.colorScheme.primary,
+          ),
+          title: const Text('Redewendix Pro'),
+          subtitle: Text(
+            state.isPro
+                ? 'Aktiv – danke!'
+                : 'Keine Werbung, mehrmals täglich, Quiz und mehr',
+          ),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => ProScreen.open(context),
+        ),
+        const Divider(),
         const _Header('Sperrbildschirm'),
         SwitchListTile(
           secondary: const Icon(Icons.notifications_active_outlined),
@@ -35,11 +51,19 @@ class SettingsScreen extends StatelessWidget {
         SwitchListTile(
           secondary: const Icon(Icons.repeat),
           title: const Text('Mehrmals täglich'),
-          subtitle: const Text('Neue Redewendungen in einem Zeitfenster'),
-          value: state.multiPerDay,
-          onChanged: state.notificationsEnabled ? state.setMultiPerDay : null,
+          subtitle: Text(
+            state.canUseMultiPerDay
+                ? 'Neue Redewendungen in einem Zeitfenster'
+                : 'Mit Pro: neue Redewendungen in einem Zeitfenster',
+          ),
+          value: state.multiPerDayActive,
+          onChanged: !state.notificationsEnabled
+              ? null
+              : state.canUseMultiPerDay
+                  ? state.setMultiPerDay
+                  : (_) => ProScreen.open(context),
         ),
-        if (!state.multiPerDay)
+        if (!state.multiPerDayActive)
           ListTile(
             leading: const Icon(Icons.schedule),
             title: const Text('Uhrzeit'),
@@ -62,7 +86,7 @@ class SettingsScreen extends StatelessWidget {
               }
             },
           ),
-        if (state.multiPerDay) ...[
+        if (state.multiPerDayActive) ...[
           ListTile(
             leading: const Icon(Icons.timelapse),
             title: const Text('Häufigkeit'),

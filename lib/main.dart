@@ -10,6 +10,7 @@ import 'screens/onboarding_screen.dart';
 import 'services/app_state.dart';
 import 'services/idiom_repository.dart';
 import 'services/notification_service.dart';
+import 'services/pro_service.dart';
 import 'services/widget_service.dart';
 
 Future<void> main() async {
@@ -21,6 +22,8 @@ Future<void> main() async {
   await notifications.init();
   final widgets = WidgetService();
   await widgets.init();
+  final pro = ProService();
+  unawaited(pro.init(state));
 
   state.onScheduleChanged = () => notifications.reschedule(state, repo);
 
@@ -30,6 +33,7 @@ Future<void> main() async {
       repo: repo,
       notifications: notifications,
       widgets: widgets,
+      pro: pro,
     ),
   );
 
@@ -44,6 +48,7 @@ class RedewendixApp extends StatefulWidget {
     required this.repo,
     required this.notifications,
     this.widgets,
+    this.pro,
   });
 
   final AppState state;
@@ -53,12 +58,16 @@ class RedewendixApp extends StatefulWidget {
   /// Startbildschirm-Widget; in Tests weggelassen.
   final WidgetService? widgets;
 
+  /// Pro-Kauf; in Tests ohne Store.
+  final ProService? pro;
+
   @override
   State<RedewendixApp> createState() => _RedewendixAppState();
 }
 
 class _RedewendixAppState extends State<RedewendixApp> {
   final _navigatorKey = GlobalKey<NavigatorState>();
+  late final ProService _pro = widget.pro ?? ProService();
   StreamSubscription<int>? _tapSub;
   StreamSubscription<int>? _widgetTapSub;
   AppLifecycleListener? _lifecycle;
@@ -110,6 +119,7 @@ class _RedewendixAppState extends State<RedewendixApp> {
       state: widget.state,
       repo: widget.repo,
       notifications: widget.notifications,
+      pro: _pro,
       child: ListenableBuilder(
         listenable: widget.state,
         builder: (context, _) => MaterialApp(
