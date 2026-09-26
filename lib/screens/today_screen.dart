@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
 import '../util/german_date.dart';
+import '../widgets/idiom_tile.dart';
+import 'history_screen.dart';
 
 class TodayScreen extends StatelessWidget {
   const TodayScreen({super.key});
@@ -14,6 +16,7 @@ class TodayScreen extends StatelessWidget {
     final idiom = scope.repo.forDay(now);
     final fav = state.isFavorite(idiom.id);
     final theme = Theme.of(context);
+    final history = scope.repo.history(now, since: state.firstLaunch);
 
     return ListView(
       padding: const EdgeInsets.all(20),
@@ -74,6 +77,23 @@ class TodayScreen extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         if (!state.permissionAsked) const _EnableNotificationsCard(),
+        if (history.isNotEmpty) ...[
+          const SizedBox(height: 8),
+          Text('Die letzten Tage', style: theme.textTheme.titleMedium),
+          for (final h in history.take(3))
+            IdiomTile(idiom: h.idiom, caption: formatPastDay(h.day, now)),
+          if (history.length > 3)
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TextButton.icon(
+                icon: const Icon(Icons.history),
+                label: const Text('Ganzer Verlauf'),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(builder: (_) => const HistoryScreen()),
+                ),
+              ),
+            ),
+        ],
       ],
     );
   }

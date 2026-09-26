@@ -14,6 +14,11 @@ class AppState extends ChangeNotifier {
     _permissionAsked = _prefs.getBool(_kPermissionAsked) ?? false;
     // Wer schon nach Mitteilungen gefragt wurde, kennt die App bereits.
     _onboardingDone = _prefs.getBool(_kOnboardingDone) ?? _permissionAsked;
+    final first = DateTime.tryParse(_prefs.getString(_kFirstLaunch) ?? '');
+    _firstLaunch = first ?? DateTime.now();
+    if (first == null) {
+      _prefs.setString(_kFirstLaunch, _firstLaunch.toIso8601String());
+    }
     _dailyHour = _prefs.getInt(_kDailyHour) ?? 8;
     _dailyMinute = _prefs.getInt(_kDailyMinute) ?? 0;
     _proStartHour = _prefs.getInt(_kProStart) ?? 8;
@@ -35,6 +40,7 @@ class AppState extends ChangeNotifier {
   static const _kNotifEnabled = 'notificationsEnabled';
   static const _kPermissionAsked = 'permissionAsked';
   static const _kOnboardingDone = 'onboardingDone';
+  static const _kFirstLaunch = 'firstLaunch';
   static const _kDailyHour = 'dailyHour';
   static const _kDailyMinute = 'dailyMinute';
   static const _kProStart = 'proStartHour';
@@ -57,6 +63,7 @@ class AppState extends ChangeNotifier {
   late bool _notificationsEnabled;
   late bool _permissionAsked;
   late bool _onboardingDone;
+  late DateTime _firstLaunch;
   late int _dailyHour;
   late int _dailyMinute;
   late int _proStartHour;
@@ -71,6 +78,9 @@ class AppState extends ChangeNotifier {
   bool get notificationsEnabled => _notificationsEnabled;
   bool get permissionAsked => _permissionAsked;
   bool get onboardingDone => _onboardingDone;
+
+  /// Erster Start der App – ab hier gibt es einen Verlauf.
+  DateTime get firstLaunch => _firstLaunch;
   int get dailyHour => _dailyHour;
   int get dailyMinute => _dailyMinute;
   int get proStartHour => _proStartHour;
