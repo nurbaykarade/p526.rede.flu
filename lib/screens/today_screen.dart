@@ -1,0 +1,119 @@
+import 'package:flutter/material.dart';
+
+import '../app_scope.dart';
+import '../util/german_date.dart';
+
+class TodayScreen extends StatelessWidget {
+  const TodayScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final scope = AppScope.of(context);
+    final state = scope.state;
+    final now = DateTime.now();
+    final idiom = scope.repo.forDay(now);
+    final fav = state.isFavorite(idiom.id);
+    final theme = Theme.of(context);
+
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Text(formatGermanDate(now),
+            style: theme.textTheme.titleMedium
+                ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+        const SizedBox(height: 4),
+        Text('Redewendung des Tages', style: theme.textTheme.headlineSmall),
+        const SizedBox(height: 16),
+        Card(
+          elevation: 0,
+          color: theme.colorScheme.primaryContainer,
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () => AppScope.openIdiom(context, idiom),
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '„${idiom.text}“',
+                    style: theme.textTheme.headlineMedium?.copyWith(
+                      fontWeight: FontWeight.w700,
+                      color: theme.colorScheme.onPrimaryContainer,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    idiom.meaning,
+                    style: theme.textTheme.titleMedium
+                        ?.copyWith(color: theme.colorScheme.onPrimaryContainer),
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      FilledButton.tonalIcon(
+                        onPressed: () => AppScope.openIdiom(context, idiom),
+                        icon: const Icon(Icons.menu_book_outlined),
+                        label: const Text('Mehr erfahren'),
+                      ),
+                      const Spacer(),
+                      IconButton(
+                        tooltip: fav ? 'Aus Favoriten entfernen' : 'Zu Favoriten',
+                        icon: Icon(fav ? Icons.favorite : Icons.favorite_border,
+                            color: fav ? theme.colorScheme.error : null),
+                        onPressed: () => state.toggleFavorite(idiom.id),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        if (!state.permissionAsked) const _EnableNotificationsCard(),
+      ],
+    );
+  }
+}
+
+class _EnableNotificationsCard extends StatelessWidget {
+  const _EnableNotificationsCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Card(
+      elevation: 0,
+      color: theme.colorScheme.tertiaryContainer,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(children: [
+              const Icon(Icons.lock_clock_outlined),
+              const SizedBox(width: 8),
+              Text('Auf dem Sperrbildschirm', style: theme.textTheme.titleMedium),
+            ]),
+            const SizedBox(height: 8),
+            const Text(
+              'Erlaube Mitteilungen, damit die Redewendung des Tages '
+              'automatisch auf deinem Sperrbildschirm erscheint.',
+            ),
+            const SizedBox(height: 12),
+            FilledButton(
+              onPressed: () async {
+                final scope = AppScope.read(context);
+                await scope.notifications.requestPermission();
+                await scope.state.setPermissionAsked();
+                await scope.notifications.reschedule(scope.state, scope.repo);
+              },
+              child: const Text('Mitteilungen erlauben'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

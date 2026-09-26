@@ -1,0 +1,828 @@
+[
+  {
+    "id": 1,
+    "text": "Tomaten auf den Augen haben",
+    "meaning": "Etwas Offensichtliches nicht sehen.",
+    "origin": "Gemeint sind gerötete, verquollene Augen, wie man sie nach zu wenig Schlaf hat – sie sehen aus wie Tomaten. Wer so müde ist, übersieht leicht etwas.",
+    "example": "Hast du Tomaten auf den Augen? Die Ampel war doch rot!"
+  },
+  {
+    "id": 2,
+    "text": "Den Nagel auf den Kopf treffen",
+    "meaning": "Genau das Richtige sagen oder den Kern einer Sache erfassen.",
+    "origin": "Beim Nageln muss man den Nagelkopf genau treffen, sonst verbiegt sich der Nagel. Bei Schießübungen wurde die Mitte der Zielscheibe außerdem oft mit einem Nagel markiert.",
+    "example": "Mit deiner Frage hast du den Nagel auf den Kopf getroffen."
+  },
+  {
+    "id": 3,
+    "text": "Schwein haben",
+    "meaning": "Unerwartet Glück haben.",
+    "origin": "Bei mittelalterlichen Wettkämpfen bekam der Letzte oft ein Ferkel als Trostpreis. Er hatte also zwar verloren, aber trotzdem etwas Wertvolles gewonnen.",
+    "example": "Der Bus war schon weg, aber dann kam noch einer – da hatte ich echt Schwein."
+  },
+  {
+    "id": 4,
+    "text": "Auf dem Holzweg sein",
+    "meaning": "Sich irren, eine falsche Annahme haben.",
+    "origin": "Holzwege führten früher in den Wald zu den Stellen, an denen Holz geschlagen wurde – und endeten dort. Wer einen Holzweg nahm, um in ein anderes Dorf zu kommen, war falsch unterwegs.",
+    "example": "Wenn du glaubst, dass ich das allein aufräume, bist du auf dem Holzweg."
+  },
+  {
+    "id": 5,
+    "text": "Um den heißen Brei herumreden",
+    "meaning": "Nicht direkt zur Sache kommen.",
+    "origin": "Das Bild stammt von einer Katze, die um einen dampfenden Breitopf herumschleicht: Sie möchte gern fressen, traut sich aber nicht heran, weil der Brei zu heiß ist.",
+    "example": "Red nicht um den heißen Brei herum – was ist passiert?"
+  },
+  {
+    "id": 6,
+    "text": "Ich verstehe nur Bahnhof",
+    "meaning": "Ich verstehe gar nichts.",
+    "origin": "Die Wendung soll von Soldaten am Ende des Ersten Weltkriegs stammen. Sie wollten nur noch nach Hause – alles andere interessierte sie nicht, sie „verstanden nur Bahnhof“, also die Heimfahrt.",
+    "example": "Der Techniker hat mir alles erklärt, aber ich verstehe nur Bahnhof."
+  },
+  {
+    "id": 7,
+    "text": "Die Katze im Sack kaufen",
+    "meaning": "Etwas kaufen, ohne es vorher geprüft zu haben.",
+    "origin": "Auf mittelalterlichen Märkten sollen Betrüger statt eines Ferkels eine Katze in einen Sack gesteckt haben. Wer den Sack nicht öffnete, merkte den Schwindel erst zu Hause.",
+    "example": "Ein Handy ohne Bilder im Internet? Da kaufe ich doch nicht die Katze im Sack."
+  },
+  {
+    "id": 8,
+    "text": "Jemandem einen Bären aufbinden",
+    "meaning": "Jemandem eine Lüge oder ein Märchen erzählen.",
+    "origin": "Die Herkunft ist nicht ganz geklärt. Eine Erklärung verweist auf das alte Wort „bar“ für Last: Man lädt jemandem eine unnötige Last auf, die er glaubt tragen zu müssen.",
+    "example": "Du hast einen Delfin im Baggersee gesehen? Du willst mir wohl einen Bären aufbinden!"
+  },
+  {
+    "id": 9,
+    "text": "Da steppt der Bär",
+    "meaning": "Dort ist viel los, es herrscht gute Stimmung.",
+    "origin": "Auf Jahrmärkten wurden früher Tanzbären vorgeführt. Wo ein Bär tanzte, war die Menge groß und die Stimmung ausgelassen.",
+    "example": "Komm heute Abend mit zum Stadtfest – da steppt der Bär!"
+  },
+  {
+    "id": 10,
+    "text": "Die Daumen drücken",
+    "meaning": "Jemandem Glück wünschen.",
+    "origin": "Der Daumen galt im Volksglauben als Glücksfinger. Hält man ihn in der Faust fest, so die Vorstellung, hält man böse Geister fern.",
+    "example": "Morgen ist meine Prüfung – drück mir die Daumen!"
+  },
+  {
+    "id": 11,
+    "text": "Die Kirche im Dorf lassen",
+    "meaning": "Nicht übertreiben, auf dem Teppich bleiben.",
+    "origin": "Prozessionen führten früher meist um die Dorfkirche herum. Nur bei großem Aufwand zog man weit hinaus – wer die Kirche im Dorf ließ, blieb beim Üblichen und übertrieb nicht.",
+    "example": "Lass mal die Kirche im Dorf – es war nur ein kleiner Kratzer am Auto."
+  },
+  {
+    "id": 12,
+    "text": "Blau machen",
+    "meaning": "Ohne triftigen Grund nicht zur Arbeit oder Schule gehen.",
+    "origin": "Färber mussten beim Blaufärben mit Waid die Stoffe lange an der Luft liegen lassen, damit die Farbe entstand. In dieser Zeit hatten sie nichts zu tun – sie „machten blau“.",
+    "example": "Er hat am Montag blau gemacht und ist ins Freibad gegangen."
+  },
+  {
+    "id": 13,
+    "text": "Das ist nicht mein Bier",
+    "meaning": "Das ist nicht meine Angelegenheit.",
+    "origin": "Die Wendung entstand wohl in Anlehnung an ältere Ausdrücke wie „Das ist nicht meine Sache“. Das eigene Bier ist das, wofür man selbst bezahlt und zuständig ist.",
+    "example": "Wie ihr euren Urlaub plant, ist nicht mein Bier."
+  },
+  {
+    "id": 14,
+    "text": "Alles in Butter",
+    "meaning": "Alles ist in Ordnung.",
+    "origin": "Eine beliebte Erklärung: Zerbrechliche Gläser wurden früher für den Transport in Fässer mit flüssiger Butter gelegt. War die Butter fest, konnte nichts mehr zerbrechen – alles war in Butter.",
+    "example": "Keine Sorge, der Streit ist geklärt – alles in Butter."
+  },
+  {
+    "id": 15,
+    "text": "Die Kuh vom Eis holen",
+    "meaning": "Ein schwieriges Problem lösen.",
+    "origin": "Eine Kuh auf glattem Eis ist in großer Gefahr und kaum zu bewegen. Sie sicher zurück aufs Ufer zu bringen, verlangt viel Geschick.",
+    "example": "Nach langer Diskussion hat die Lehrerin die Kuh vom Eis geholt."
+  },
+  {
+    "id": 16,
+    "text": "Den Faden verlieren",
+    "meaning": "Beim Sprechen nicht mehr wissen, was man sagen wollte.",
+    "origin": "In der griechischen Sage findet Theseus mit einem Faden, den Ariadne ihm gab, aus dem Labyrinth. Wer den Faden verliert, findet nicht mehr zurück.",
+    "example": "Moment, jetzt habe ich den Faden verloren – wo war ich stehen geblieben?"
+  },
+  {
+    "id": 17,
+    "text": "Jemandem reinen Wein einschenken",
+    "meaning": "Jemandem die volle Wahrheit sagen.",
+    "origin": "Wirte verdünnten den Wein früher oft mit Wasser. Ein ehrlicher Wirt schenkte dagegen reinen, unverfälschten Wein aus.",
+    "example": "Ich muss dir reinen Wein einschenken: Ich habe dein Fahrrad kaputt gemacht."
+  },
+  {
+    "id": 18,
+    "text": "Etwas auf die lange Bank schieben",
+    "meaning": "Etwas hinauszögern oder aufschieben.",
+    "origin": "An Gerichten wurden unerledigte Akten früher in langen Truhen, sogenannten Bänken, abgelegt. Was dort landete, wurde oft lange nicht bearbeitet.",
+    "example": "Die Steuererklärung solltest du nicht auf die lange Bank schieben."
+  },
+  {
+    "id": 19,
+    "text": "Aus einer Mücke einen Elefanten machen",
+    "meaning": "Etwas maßlos übertreiben.",
+    "origin": "Das Bild ist sehr alt: Schon der antike Schriftsteller Lukian verwendete die Gegenüberstellung von winziger Mücke und riesigem Elefanten für Übertreibungen.",
+    "example": "Es ist doch nur ein Fleck – mach nicht aus einer Mücke einen Elefanten."
+  },
+  {
+    "id": 20,
+    "text": "Hals- und Beinbruch",
+    "meaning": "Viel Glück! (vor allem vor Prüfungen oder Auftritten)",
+    "origin": "Man vermutet, dass die Wendung aus dem jiddischen „hazlocho un broche“ (Glück und Segen) entstand, das im Deutschen ähnlich klang und umgedeutet wurde.",
+    "example": "Du hast heute deine Fahrprüfung? Hals- und Beinbruch!"
+  },
+  {
+    "id": 21,
+    "text": "Jemandem die Leviten lesen",
+    "meaning": "Jemanden ernsthaft zurechtweisen.",
+    "origin": "Im Mittelalter lasen Mönche einander aus dem biblischen Buch Levitikus vor, das viele Verhaltensregeln enthält – oft verbunden mit einer Ermahnung.",
+    "example": "Nach dem Chaos im Klassenzimmer hat uns der Direktor die Leviten gelesen."
+  },
+  {
+    "id": 22,
+    "text": "Sich wie ein Schneekönig freuen",
+    "meaning": "Sich riesig freuen.",
+    "origin": "„Schneekönig“ ist ein alter Name für den Zaunkönig. Der kleine Vogel singt auch mitten im Winter fröhlich, als würde ihn die Kälte nicht stören.",
+    "example": "Als sie das Geschenk auspackte, freute sie sich wie ein Schneekönig."
+  },
+  {
+    "id": 23,
+    "text": "Tacheles reden",
+    "meaning": "Offen und deutlich sagen, worum es geht.",
+    "origin": "„Tachles“ kommt aus dem Jiddischen und bedeutet so viel wie Zweck oder Ziel. Wer Tacheles redet, kommt direkt zum Punkt.",
+    "example": "Jetzt lass uns mal Tacheles reden: Wer hat den letzten Keks gegessen?"
+  },
+  {
+    "id": 24,
+    "text": "Die Flinte ins Korn werfen",
+    "meaning": "Vorschnell aufgeben.",
+    "origin": "Soldaten, die auf dem Schlachtfeld nicht mehr kämpfen wollten, sollen ihre Gewehre in ein Kornfeld geworfen haben, wo man sie nicht sah, und dann geflohen sein.",
+    "example": "Nur weil der erste Versuch misslungen ist, musst du nicht gleich die Flinte ins Korn werfen."
+  },
+  {
+    "id": 25,
+    "text": "Ins Fettnäpfchen treten",
+    "meaning": "Ungewollt etwas Peinliches oder Taktloses sagen oder tun.",
+    "origin": "In Bauernhäusern stand früher ein Napf mit Fett, um nasse Stiefel einzufetten. Wer hineintrat, verteilte Fett auf dem Boden – und zog den Ärger der Hausfrau auf sich.",
+    "example": "Ich habe sie nach ihrem Freund gefragt – dabei hatten sie sich gerade getrennt. Da bin ich voll ins Fettnäpfchen getreten."
+  },
+  {
+    "id": 26,
+    "text": "Jemandem ein X für ein U vormachen",
+    "meaning": "Jemanden täuschen oder betrügen.",
+    "origin": "Im römischen Zahlensystem steht V (früher auch als U geschrieben) für 5 und X für 10. Wer die Striche eines V nach unten verlängerte, machte daraus ein X – und verdoppelte heimlich eine Schuld.",
+    "example": "Mir kannst du kein X für ein U vormachen – ich habe die Rechnung genau gelesen."
+  },
+  {
+    "id": 27,
+    "text": "Unter vier Augen",
+    "meaning": "Vertraulich, nur zu zweit.",
+    "origin": "Wenn nur zwei Menschen miteinander sprechen, sind genau vier Augen beteiligt – niemand sonst hört mit.",
+    "example": "Können wir das bitte unter vier Augen besprechen?"
+  },
+  {
+    "id": 28,
+    "text": "Den Kopf in den Sand stecken",
+    "meaning": "Ein Problem nicht wahrhaben wollen.",
+    "origin": "Die Wendung beruht auf dem alten Irrglauben, dass Strauße bei Gefahr ihren Kopf in den Sand stecken. In Wirklichkeit tun sie das nicht.",
+    "example": "Wenn es Probleme gibt, bringt es nichts, den Kopf in den Sand zu stecken."
+  },
+  {
+    "id": 29,
+    "text": "Auf großem Fuß leben",
+    "meaning": "Verschwenderisch und aufwendig leben.",
+    "origin": "Im Mittelalter trugen vornehme Leute Schnabelschuhe. Je länger die Spitze des Schuhs, desto höher der Stand und desto größer der Reichtum.",
+    "example": "Seit er im Lotto gewonnen hat, lebt er auf großem Fuß."
+  },
+  {
+    "id": 30,
+    "text": "Kein Blatt vor den Mund nehmen",
+    "meaning": "Offen und ohne Rücksicht seine Meinung sagen.",
+    "origin": "Schauspieler hielten sich früher ein Blatt vor das Gesicht, um nicht erkannt zu werden, wenn sie Kritisches sagten. Wer das nicht tat, sprach offen.",
+    "example": "Oma nimmt kein Blatt vor den Mund – sie sagt immer, was sie denkt."
+  },
+  {
+    "id": 31,
+    "text": "Etwas ausbaden müssen",
+    "meaning": "Die Folgen von etwas tragen müssen, oft von dem, was andere angerichtet haben.",
+    "origin": "Früher badete die ganze Familie nacheinander im selben Wasser. Wer als Letzter dran war, musste im schmutzigsten Wasser baden und den Zuber danach leeren.",
+    "example": "Die anderen haben gestritten und ich muss es jetzt ausbaden."
+  },
+  {
+    "id": 32,
+    "text": "Das Kind mit dem Bade ausschütten",
+    "meaning": "Mit dem Schlechten auch das Gute verwerfen; übereilt handeln.",
+    "origin": "Das Bild ist drastisch: Man schüttet das schmutzige Badewasser weg – und aus Unachtsamkeit gleich das Baby mit.",
+    "example": "Nur weil ein Teil des Plans nicht funktioniert, sollten wir nicht das Kind mit dem Bade ausschütten."
+  },
+  {
+    "id": 33,
+    "text": "Jemandem nicht das Wasser reichen können",
+    "meaning": "Jemandem an Können oder Wert weit unterlegen sein.",
+    "origin": "Bei Festmählern reichten Diener den Gästen Wasser zum Händewaschen. Wer nicht einmal gut genug für diesen Dienst war, stand ganz unten.",
+    "example": "Im Schach kann ihr in der ganzen Schule niemand das Wasser reichen."
+  },
+  {
+    "id": 34,
+    "text": "Mit jemandem ein Hühnchen rupfen",
+    "meaning": "Mit jemandem einen Streit austragen, ihn zur Rede stellen.",
+    "origin": "Hühnerrupfen ist mühsam und dauert – ebenso wie eine Auseinandersetzung, die man mit jemandem noch „zu erledigen“ hat.",
+    "example": "Mit meinem Bruder habe ich noch ein Hühnchen zu rupfen – er hat meine Kopfhörer genommen."
+  },
+  {
+    "id": 35,
+    "text": "Die Katze aus dem Sack lassen",
+    "meaning": "Ein Geheimnis verraten oder eine Absicht offenlegen.",
+    "origin": "Passend zur „Katze im Sack“: Wird der Sack geöffnet, springt die Katze heraus und die Wahrheit ist sichtbar.",
+    "example": "Nach langem Zögern ließ sie die Katze aus dem Sack: Sie zieht nach Hamburg."
+  },
+  {
+    "id": 36,
+    "text": "Perlen vor die Säue werfen",
+    "meaning": "Etwas Wertvolles jemandem geben, der es nicht zu schätzen weiß.",
+    "origin": "Die Wendung stammt aus der Bibel (Matthäus 7,6): „Werft eure Perlen nicht vor die Säue.“",
+    "example": "Ihm ein teures Parfüm zu schenken, hieße Perlen vor die Säue zu werfen."
+  },
+  {
+    "id": 37,
+    "text": "Zwei Fliegen mit einer Klappe schlagen",
+    "meaning": "Mit einer Handlung zwei Ziele gleichzeitig erreichen.",
+    "origin": "Mit der Fliegenklatsche („Klappe“) auf einen Schlag zwei Fliegen zu erwischen, ist besonders geschickt.",
+    "example": "Ich fahre mit dem Rad zur Arbeit – so schlage ich zwei Fliegen mit einer Klappe: Sport und kein Stau."
+  },
+  {
+    "id": 38,
+    "text": "Den Wald vor lauter Bäumen nicht sehen",
+    "meaning": "Vor lauter Einzelheiten das Offensichtliche übersehen.",
+    "origin": "Wer mitten im Wald steht und nur einzelne Bäume betrachtet, verliert den Blick für das Ganze.",
+    "example": "Die Lösung stand die ganze Zeit an der Tafel – ich habe den Wald vor lauter Bäumen nicht gesehen."
+  },
+  {
+    "id": 39,
+    "text": "Ein Brett vor dem Kopf haben",
+    "meaning": "Etwas nicht verstehen, begriffsstutzig sein.",
+    "origin": "Störrischen Ochsen band man früher ein Brett vor die Augen, damit sie ruhig blieben. Sehen konnten sie damit nichts mehr.",
+    "example": "Entschuldige, ich hatte gerade ein Brett vor dem Kopf – natürlich ist heute Mittwoch!"
+  },
+  {
+    "id": 40,
+    "text": "Jemanden auf den Arm nehmen",
+    "meaning": "Sich über jemanden lustig machen, ihn necken.",
+    "origin": "Wie ein kleines Kind, das man auf den Arm nimmt und mit dem man spielt, wird jemand nicht ganz ernst genommen.",
+    "example": "Du hast den Test mit einer Eins bestanden? Du nimmst mich auf den Arm!"
+  },
+  {
+    "id": 41,
+    "text": "Etwas an die große Glocke hängen",
+    "meaning": "Etwas überall herumerzählen.",
+    "origin": "Früher wurden wichtige Neuigkeiten durch Glockenläuten oder vom Ausrufer mit Glocke verkündet – so erfuhr es der ganze Ort.",
+    "example": "Ich erzähle es dir, aber häng es bitte nicht an die große Glocke."
+  },
+  {
+    "id": 42,
+    "text": "Mit dem linken Fuß zuerst aufgestanden sein",
+    "meaning": "Schlechte Laune haben.",
+    "origin": "Die linke Seite galt im Volksglauben lange als Unglücksseite. Wer morgens zuerst mit dem linken Fuß aufstand, hatte angeblich einen schlechten Tag vor sich.",
+    "example": "Was ist denn mit dir los? Bist du heute mit dem linken Fuß zuerst aufgestanden?"
+  },
+  {
+    "id": 43,
+    "text": "Eulen nach Athen tragen",
+    "meaning": "Etwas Überflüssiges tun.",
+    "origin": "Die Eule war das Wappentier Athens und prangte auch auf den Münzen der Stadt. Eulen nach Athen zu bringen, war also völlig unnötig.",
+    "example": "Ihm ein Buch über Fußball zu schenken, hieße Eulen nach Athen tragen – er hat schon alle."
+  },
+  {
+    "id": 44,
+    "text": "Etwas aus dem Ärmel schütteln",
+    "meaning": "Etwas mühelos und ohne Vorbereitung tun.",
+    "origin": "Die Gewänder hatten früher weite Ärmel, die als Taschen dienten. Man musste sie nur schütteln, und schon fiel das Gewünschte heraus.",
+    "example": "So eine Rede kann ich nicht einfach aus dem Ärmel schütteln."
+  },
+  {
+    "id": 45,
+    "text": "Da liegt der Hase im Pfeffer",
+    "meaning": "Das ist der eigentliche Kern des Problems.",
+    "origin": "„Hasenpfeffer“ ist ein Gericht aus Hasenfleisch in scharfer Soße. Liegt der Hase erst im Pfeffer, ist nichts mehr zu ändern – die Sache ist entschieden.",
+    "example": "Wir haben genug Geld, aber keine Zeit – da liegt der Hase im Pfeffer."
+  },
+  {
+    "id": 46,
+    "text": "Den Löffel abgeben",
+    "meaning": "Sterben (umgangssprachlich).",
+    "origin": "Früher besaß jeder Mensch seinen eigenen Löffel. Nach dem Tod wurde dieser an jemand anderen weitergegeben.",
+    "example": "Mein alter Laptop hat gestern endgültig den Löffel abgegeben."
+  },
+  {
+    "id": 47,
+    "text": "Jemandem geht ein Licht auf",
+    "meaning": "Jemand versteht plötzlich etwas.",
+    "origin": "Licht steht bildlich für Erkenntnis: Wo es hell wird, sieht man auf einmal klar.",
+    "example": "Als ich die Skizze sah, ging mir endlich ein Licht auf."
+  },
+  {
+    "id": 48,
+    "text": "Die Beine in die Hand nehmen",
+    "meaning": "Sehr schnell laufen, davonrennen.",
+    "origin": "Das Bild zeigt jemanden, der so schnell rennt, dass er sich scheinbar die Beine mit den Händen nach vorne reißt.",
+    "example": "Als der Hund bellte, nahmen wir die Beine in die Hand."
+  },
+  {
+    "id": 49,
+    "text": "Jemandem einen Korb geben",
+    "meaning": "Jemanden abweisen, besonders bei einem Liebesantrag.",
+    "origin": "Ein Burgfräulein soll einem ungeliebten Verehrer einen Korb mit brüchigem Boden hinabgelassen haben, um ihn hochzuziehen. Er fiel durch – und war abgewiesen.",
+    "example": "Er hat sie zum Tanzen eingeladen, aber sie hat ihm einen Korb gegeben."
+  },
+  {
+    "id": 50,
+    "text": "Einen Kater haben",
+    "meaning": "Sich nach zu viel Alkohol elend fühlen.",
+    "origin": "Vermutlich stammt die Wendung aus der Leipziger Studentensprache des 19. Jahrhunderts, in der „Katarrh“ (Erkältung) zu „Kater“ verballhornt wurde.",
+    "example": "Nach der Feier hatte er am nächsten Morgen einen fürchterlichen Kater."
+  },
+  {
+    "id": 51,
+    "text": "Einen Frosch im Hals haben",
+    "meaning": "Heiser sein, eine raue Stimme haben.",
+    "origin": "Die kratzige Stimme erinnert an das Quaken eines Frosches – als säße einer im Hals.",
+    "example": "Entschuldigung, ich habe heute einen Frosch im Hals."
+  },
+  {
+    "id": 52,
+    "text": "Nicht alle Tassen im Schrank haben",
+    "meaning": "Nicht ganz bei Verstand sein.",
+    "origin": "Die genaue Herkunft ist unklar. Das Bild: In einem ordentlichen Haushalt sind alle Tassen im Schrank – fehlt etwas, stimmt etwas nicht.",
+    "example": "Bei Gewitter schwimmen gehen? Du hast wohl nicht alle Tassen im Schrank!"
+  },
+  {
+    "id": 53,
+    "text": "Jemanden über den Tisch ziehen",
+    "meaning": "Jemanden übervorteilen oder betrügen.",
+    "origin": "Beim Fingerhakeln sitzen sich zwei gegenüber und versuchen, den anderen über den Tisch zu sich herüberzuziehen. Wer verliert, wird über den Tisch gezogen.",
+    "example": "Beim Autokauf hat der Händler ihn ordentlich über den Tisch gezogen."
+  },
+  {
+    "id": 54,
+    "text": "Etwas durch die Blume sagen",
+    "meaning": "Etwas vorsichtig und indirekt sagen.",
+    "origin": "In der „Blumensprache“ hatte jede Blume eine Bedeutung. Statt etwas offen auszusprechen, verschenkte man die passende Blume.",
+    "example": "Sie hat mir durch die Blume gesagt, dass mein Pullover nicht schön ist."
+  },
+  {
+    "id": 55,
+    "text": "Das A und O",
+    "meaning": "Das Wichtigste, das Wesentliche.",
+    "origin": "Alpha und Omega sind der erste und der letzte Buchstabe des griechischen Alphabets. In der Bibel steht die Formel für Anfang und Ende von allem.",
+    "example": "Beim Lernen ist regelmäßiges Üben das A und O."
+  },
+  {
+    "id": 56,
+    "text": "Bis in die Puppen",
+    "meaning": "Sehr lange, bis spät.",
+    "origin": "Im Berliner Tiergarten standen am Großen Stern Statuen, die der Volksmund „Puppen“ nannte. Ein Spaziergang bis zu den Puppen war damals sehr weit.",
+    "example": "Am Wochenende haben wir bis in die Puppen geschlafen."
+  },
+  {
+    "id": 57,
+    "text": "Jemandem die Stange halten",
+    "meaning": "Jemanden unterstützen, zu ihm halten.",
+    "origin": "Bei mittelalterlichen Zweikämpfen standen Helfer bereit, die mit einer Stange eingriffen, um einen unterlegenen Kämpfer zu schützen.",
+    "example": "Egal was passiert, ich halte dir die Stange."
+  },
+  {
+    "id": 58,
+    "text": "Klar wie Kloßbrühe",
+    "meaning": "Völlig klar, offensichtlich.",
+    "origin": "Die Wendung ist eigentlich ironisch: Brühe, in der Klöße gekocht wurden, ist meist trüb. Heute wird sie aber ernst gemeint verwendet.",
+    "example": "Wer die Vase umgeworfen hat, ist klar wie Kloßbrühe – der Hund!"
+  },
+  {
+    "id": 59,
+    "text": "Aus allen Wolken fallen",
+    "meaning": "Völlig überrascht oder enttäuscht sein.",
+    "origin": "Wer in Gedanken „über den Wolken schwebt“, fällt bei einer unerwarteten Nachricht jäh auf den Boden der Tatsachen.",
+    "example": "Als ich hörte, dass unsere Lehrerin die Schule verlässt, fiel ich aus allen Wolken."
+  },
+  {
+    "id": 60,
+    "text": "Auf Wolke sieben schweben",
+    "meaning": "Überglücklich sein, besonders verliebt.",
+    "origin": "Die Zahl Sieben gilt seit alters als besondere, glückbringende Zahl. Die siebte Wolke steht für den höchsten Himmel des Glücks.",
+    "example": "Seit ihrer Hochzeit schweben die beiden auf Wolke sieben."
+  },
+  {
+    "id": 61,
+    "text": "Das fünfte Rad am Wagen sein",
+    "meaning": "Überflüssig sein, nicht dazugehören.",
+    "origin": "Ein Wagen braucht vier Räder. Ein fünftes Rad hat keine Aufgabe.",
+    "example": "Bei den beiden Verliebten komme ich mir vor wie das fünfte Rad am Wagen."
+  },
+  {
+    "id": 62,
+    "text": "Seine Hände in Unschuld waschen",
+    "meaning": "Jede Verantwortung von sich weisen.",
+    "origin": "In der Bibel wäscht Pontius Pilatus seine Hände, um zu zeigen, dass er am Tod Jesu keine Schuld tragen will.",
+    "example": "Der Chef wusch seine Hände in Unschuld, obwohl er das Projekt geleitet hatte."
+  },
+  {
+    "id": 63,
+    "text": "Etwas im Schilde führen",
+    "meaning": "Heimlich etwas planen, meist nichts Gutes.",
+    "origin": "Ritter trugen Wappen auf ihren Schilden. Daran erkannte man, ob jemand Freund oder Feind war – und was er vorhatte.",
+    "example": "Die Kinder sind so verdächtig ruhig – die führen doch etwas im Schilde."
+  },
+  {
+    "id": 64,
+    "text": "Den Braten riechen",
+    "meaning": "Etwas vorher ahnen, eine Gefahr bemerken.",
+    "origin": "Wie ein Tier, das den Braten und damit die Menschen in der Nähe riecht, ahnt man, dass etwas im Busch ist.",
+    "example": "Der Fuchs hat den Braten gerochen und ist nicht in die Falle gegangen."
+  },
+  {
+    "id": 65,
+    "text": "Jemandem Honig um den Mund schmieren",
+    "meaning": "Jemandem schmeicheln, um etwas zu erreichen.",
+    "origin": "Honig ist süß – wer anderen süße Worte sagt, will sie für sich gewinnen.",
+    "example": "Du brauchst mir keinen Honig um den Mund zu schmieren, du bekommst trotzdem kein Eis."
+  },
+  {
+    "id": 66,
+    "text": "Mit Kanonen auf Spatzen schießen",
+    "meaning": "Mit übertriebenen Mitteln gegen ein kleines Problem vorgehen.",
+    "origin": "Eine Kanone gegen einen winzigen Vogel einzusetzen, steht in keinem Verhältnis.",
+    "example": "Wegen eines vergessenen Hefts gleich die Eltern anzurufen, heißt mit Kanonen auf Spatzen schießen."
+  },
+  {
+    "id": 67,
+    "text": "Einen Zahn zulegen",
+    "meaning": "Schneller werden, sich beeilen.",
+    "origin": "Über offenen Herdfeuern hing der Kochtopf an einer gezackten Zahnstange. Hängte man ihn einen „Zahn“ tiefer, kochte das Essen schneller.",
+    "example": "Wir müssen einen Zahn zulegen, sonst verpassen wir den Zug."
+  },
+  {
+    "id": 68,
+    "text": "Leben wie Gott in Frankreich",
+    "meaning": "Sorglos und im Überfluss leben.",
+    "origin": "Frankreich galt als Land des guten Essens und Genusses. Die Wendung meint, dort ginge es selbst Gott besonders gut.",
+    "example": "In den Ferien bei Oma leben wir wie Gott in Frankreich."
+  },
+  {
+    "id": 69,
+    "text": "Jemandem die Suppe versalzen",
+    "meaning": "Jemandem die Pläne oder die Freude verderben.",
+    "origin": "Eine versalzene Suppe ist ungenießbar – ebenso wie ein Vorhaben, das jemand absichtlich verdorben hat.",
+    "example": "Der Regen hat uns das Picknick gründlich versalzen."
+  },
+  {
+    "id": 70,
+    "text": "Ein Katzensprung",
+    "meaning": "Eine sehr kurze Entfernung.",
+    "origin": "Eine Katze springt zwar geschickt, aber keine großen Strecken. Was nur einen Katzensprung entfernt ist, liegt ganz nah.",
+    "example": "Der Bäcker ist nur einen Katzensprung von hier."
+  },
+  {
+    "id": 71,
+    "text": "Die Rechnung ohne den Wirt machen",
+    "meaning": "Sich verkalkulieren, weil man einen wichtigen Umstand übersehen hat.",
+    "origin": "Wer im Gasthaus seine Zeche selbst ausrechnet, erlebt oft eine Überraschung – denn am Ende bestimmt der Wirt, was zu zahlen ist.",
+    "example": "Er dachte, er könne einfach früher gehen – aber da hatte er die Rechnung ohne den Wirt gemacht."
+  },
+  {
+    "id": 72,
+    "text": "Jemanden hinters Licht führen",
+    "meaning": "Jemanden täuschen.",
+    "origin": "Wer jemanden hinter die Lichtquelle führt, lässt ihn im Dunkeln stehen, wo er nichts erkennen kann.",
+    "example": "Der Betrüger hat viele Leute hinters Licht geführt."
+  },
+  {
+    "id": 73,
+    "text": "Ein Auge zudrücken",
+    "meaning": "Nachsichtig sein, über einen Fehler hinwegsehen.",
+    "origin": "Wer ein Auge schließt, sieht nur noch halb – und übersieht dabei absichtlich etwas.",
+    "example": "Diesmal drücke ich noch ein Auge zu, aber nächstes Mal gibt es Ärger."
+  },
+  {
+    "id": 74,
+    "text": "Auf dem Schlauch stehen",
+    "meaning": "Etwas gerade nicht verstehen.",
+    "origin": "Wer auf einem Wasserschlauch steht, drückt ihn zu – es kommt nichts mehr durch. So geht es auch mit einem Gedanken, der nicht fließt.",
+    "example": "Sorry, ich stehe gerade auf dem Schlauch – was meinst du?"
+  },
+  {
+    "id": 75,
+    "text": "Seinen Senf dazugeben",
+    "meaning": "Ungefragt seine Meinung äußern.",
+    "origin": "Als Senf im 17. Jahrhundert in Mode kam, servierten manche Wirte ihn zu jedem Gericht, ob die Gäste ihn wollten oder nicht.",
+    "example": "Onkel Klaus muss zu jedem Thema seinen Senf dazugeben."
+  },
+  {
+    "id": 76,
+    "text": "Kalte Füße bekommen",
+    "meaning": "Angst bekommen und von einem Vorhaben zurückschrecken.",
+    "origin": "Wer lange unentschlossen irgendwo steht und wartet, bekommt kalte Füße – und geht am Ende lieber nach Hause.",
+    "example": "Kurz vor dem Bungee-Sprung hat er kalte Füße bekommen."
+  },
+  {
+    "id": 77,
+    "text": "Wissen, wo der Schuh drückt",
+    "meaning": "Wissen, wo das eigentliche Problem liegt.",
+    "origin": "Nur wer einen Schuh trägt, spürt genau, an welcher Stelle er drückt – andere sehen es von außen nicht.",
+    "example": "Erzähl mal, wo drückt der Schuh?"
+  },
+  {
+    "id": 78,
+    "text": "Jemandem zeigen, wo der Hammer hängt",
+    "meaning": "Jemandem deutlich machen, wer das Sagen hat.",
+    "origin": "In der Werkstatt weiß der Meister, wo das Werkzeug hängt. Wer es dem Lehrling zeigt, zeigt ihm auch, wer der Chef ist.",
+    "example": "Der neue Trainer hat der Mannschaft gleich gezeigt, wo der Hammer hängt."
+  },
+  {
+    "id": 79,
+    "text": "Die Ohren steif halten",
+    "meaning": "Durchhalten, nicht den Mut verlieren.",
+    "origin": "Tiere wie Pferde oder Hunde stellen ihre Ohren auf, wenn sie wach und aufmerksam sind. Hängende Ohren zeigen dagegen Müdigkeit und Mutlosigkeit.",
+    "example": "Halt die Ohren steif – bald hast du es geschafft!"
+  },
+  {
+    "id": 80,
+    "text": "Eine Extrawurst bekommen",
+    "meaning": "Eine Sonderbehandlung erhalten.",
+    "origin": "Beim Metzger bekamen besondere Kunden – oder Kinder – früher gern eine Extra-Scheibe Wurst.",
+    "example": "Warum soll ausgerechnet er eine Extrawurst bekommen?"
+  },
+  {
+    "id": 81,
+    "text": "Ach du grüne Neune!",
+    "meaning": "Ausruf des Erschreckens oder Erstaunens.",
+    "origin": "In Berlin gab es ein beliebtes Tanzlokal in der Blumenstraße 9, dessen Eingang am „Grünen Weg“ lag. Es war für seine wilden Feste bekannt.",
+    "example": "Ach du grüne Neune, wie sieht denn dein Zimmer aus!"
+  },
+  {
+    "id": 82,
+    "text": "Das geht über die Hutschnur",
+    "meaning": "Das geht zu weit, das ist zu viel.",
+    "origin": "Im Egerland durfte man Wasser aus einer Leitung höchstens in der Dicke einer Hutschnur entnehmen. Wer mehr nahm, überschritt das erlaubte Maß.",
+    "example": "Dass du mich anlügst, geht mir wirklich über die Hutschnur."
+  },
+  {
+    "id": 83,
+    "text": "Unter einer Decke stecken",
+    "meaning": "Heimlich gemeinsame Sache machen.",
+    "origin": "Wer sich eine Decke teilt, ist sich sehr nah und vertraut. Im Mittelalter schwor man sich angeblich sogar unter einem gemeinsamen Mantel Treue.",
+    "example": "Ich glaube, die beiden stecken unter einer Decke."
+  },
+  {
+    "id": 84,
+    "text": "Jemandem den Kopf waschen",
+    "meaning": "Jemanden gründlich zurechtweisen.",
+    "origin": "Das Kopfwaschen war früher eine unangenehme, gründliche Angelegenheit – ähnlich wie eine ordentliche Standpauke.",
+    "example": "Nach der Sache mit dem Fenster hat der Vater ihm ordentlich den Kopf gewaschen."
+  },
+  {
+    "id": 85,
+    "text": "Sich ins Zeug legen",
+    "meaning": "Sich sehr anstrengen.",
+    "origin": "Mit „Zeug“ ist das Geschirr von Zugtieren gemeint. Ein Pferd, das sich kräftig ins Zeug legt, zieht mit voller Kraft.",
+    "example": "Für die Aufführung haben sich alle mächtig ins Zeug gelegt."
+  },
+  {
+    "id": 86,
+    "text": "Stein und Bein schwören",
+    "meaning": "Etwas feierlich und nachdrücklich versichern.",
+    "origin": "Früher schwor man auf den Altarstein und auf Gebeine (Reliquien) von Heiligen. Ein solcher Eid galt als besonders verbindlich.",
+    "example": "Er schwor Stein und Bein, dass er die Schokolade nicht gegessen hat."
+  },
+  {
+    "id": 87,
+    "text": "Das ist Jacke wie Hose",
+    "meaning": "Das ist egal, es macht keinen Unterschied.",
+    "origin": "Früher wurden Jacke und Hose oft aus demselben Stoff geschneidert. Welches Teil man zuerst nahm, war einerlei.",
+    "example": "Ob wir heute oder morgen ins Kino gehen, ist mir Jacke wie Hose."
+  },
+  {
+    "id": 88,
+    "text": "Jemandem einen Strich durch die Rechnung machen",
+    "meaning": "Jemandes Pläne durchkreuzen.",
+    "origin": "Ein Strich durch eine Rechnung oder Liste bedeutet, dass sie ungültig ist.",
+    "example": "Wir wollten grillen, aber das Wetter hat uns einen Strich durch die Rechnung gemacht."
+  },
+  {
+    "id": 89,
+    "text": "Auf den Busch klopfen",
+    "meaning": "Vorsichtig etwas herausfinden wollen.",
+    "origin": "Bei der Jagd klopften Treiber auf Büsche, um das darin versteckte Wild aufzuscheuchen.",
+    "example": "Ich klopf mal bei Mama auf den Busch, ob wir einen Hund bekommen."
+  },
+  {
+    "id": 90,
+    "text": "Jemanden im Stich lassen",
+    "meaning": "Jemanden in einer schwierigen Lage allein lassen.",
+    "origin": "Bei Ritterturnieren half der Knappe seinem gestürzten Herrn wieder auf. Tat er es nicht, blieb der Ritter dem Stich der gegnerischen Lanze ausgeliefert.",
+    "example": "Du kannst mich doch jetzt nicht im Stich lassen!"
+  },
+  {
+    "id": 91,
+    "text": "Den Teufel an die Wand malen",
+    "meaning": "Unheil heraufbeschwören, das Schlimmste befürchten.",
+    "origin": "Im Volksglauben galt: Wer vom Teufel spricht oder ihn gar abbildet, lockt ihn herbei.",
+    "example": "Mal nicht den Teufel an die Wand – es wird schon gut gehen."
+  },
+  {
+    "id": 92,
+    "text": "Kohldampf haben",
+    "meaning": "Großen Hunger haben.",
+    "origin": "Das Wort stammt aus dem Rotwelschen, einer alten Sprache von Fahrenden. „Koll“ und „Dampf“ bedeuteten dort beide Hunger.",
+    "example": "Nach der Wanderung hatten alle Kohldampf."
+  },
+  {
+    "id": 93,
+    "text": "Das Handtuch werfen",
+    "meaning": "Aufgeben.",
+    "origin": "Beim Boxen wirft der Trainer ein Handtuch in den Ring, um den Kampf für seinen Boxer aufzugeben.",
+    "example": "Nach drei gescheiterten Versuchen wollte sie schon das Handtuch werfen."
+  },
+  {
+    "id": 94,
+    "text": "Über den Berg sein",
+    "meaning": "Das Schlimmste überstanden haben.",
+    "origin": "Wer einen Berg überquert hat, hat den anstrengendsten Teil des Weges hinter sich – ab jetzt geht es bergab.",
+    "example": "Der Patient ist noch schwach, aber über den Berg."
+  },
+  {
+    "id": 95,
+    "text": "Jemandem auf den Zahn fühlen",
+    "meaning": "Jemanden genau prüfen oder ausfragen.",
+    "origin": "Beim Pferdehandel schaute man den Tieren ins Maul, denn an den Zähnen erkennt man Alter und Gesundheit.",
+    "example": "Im Vorstellungsgespräch hat man ihr ordentlich auf den Zahn gefühlt."
+  },
+  {
+    "id": 96,
+    "text": "Zwischen Tür und Angel",
+    "meaning": "In Eile, nebenbei.",
+    "origin": "Wer in der Tür steht, zwischen Türblatt und Angel, ist gerade im Kommen oder Gehen und hat keine Zeit.",
+    "example": "Das können wir nicht zwischen Tür und Angel besprechen."
+  },
+  {
+    "id": 97,
+    "text": "Mit Ach und Krach",
+    "meaning": "Mit großer Mühe, gerade noch.",
+    "origin": "„Ach“ steht für das Klagen, „Krach“ für Lärm und Streit. Zusammen beschreiben sie einen mühsamen, holprigen Weg zum Ziel.",
+    "example": "Mit Ach und Krach hat er die Prüfung bestanden."
+  },
+  {
+    "id": 98,
+    "text": "Ins Gras beißen",
+    "meaning": "Sterben (umgangssprachlich).",
+    "origin": "Das Bild stammt von Kriegern, die im Kampf tödlich getroffen zu Boden fielen und dabei buchstäblich ins Gras bissen.",
+    "example": "In dem Western beißen die Bösewichte am Ende alle ins Gras."
+  },
+  {
+    "id": 99,
+    "text": "Die Nase voll haben",
+    "meaning": "Von etwas genug haben, es satthaben.",
+    "origin": "Vermutlich vom Schnupfen: Wer die Nase voll hat, fühlt sich elend und mag nichts mehr.",
+    "example": "Von dem ständigen Regen habe ich langsam die Nase voll."
+  },
+  {
+    "id": 100,
+    "text": "Jemandem auf den Keks gehen",
+    "meaning": "Jemanden nerven.",
+    "origin": "Eine jüngere, umgangssprachliche Wendung. „Keks“ steht hier scherzhaft für den Kopf.",
+    "example": "Dein ständiges Summen geht mir auf den Keks."
+  },
+  {
+    "id": 101,
+    "text": "Die Hosen anhaben",
+    "meaning": "In einer Beziehung oder Familie das Sagen haben.",
+    "origin": "Früher trugen nur Männer Hosen und waren zugleich das Familienoberhaupt. Wer die Hosen anhat, bestimmt.",
+    "example": "Bei den Nachbarn hat eindeutig sie die Hosen an."
+  },
+  {
+    "id": 102,
+    "text": "Wie ein Fisch auf dem Trockenen",
+    "meaning": "Hilflos, fehl am Platz.",
+    "origin": "Ein Fisch außerhalb des Wassers zappelt hilflos, weil er nicht in seinem Element ist.",
+    "example": "Auf der Party kannte ich niemanden und fühlte mich wie ein Fisch auf dem Trockenen."
+  },
+  {
+    "id": 103,
+    "text": "Jemandem nicht über den Weg trauen",
+    "meaning": "Jemandem überhaupt nicht vertrauen.",
+    "origin": "Man traut dem anderen nicht einmal so weit, dass man ihn allein über den Weg gehen lässt.",
+    "example": "Dem neuen Verkäufer traue ich nicht über den Weg."
+  },
+  {
+    "id": 104,
+    "text": "Wie die Faust aufs Auge passen",
+    "meaning": "Gar nicht zusammenpassen – oder, ironisch gemeint, perfekt passen.",
+    "origin": "Eine Faust auf dem Auge passt eigentlich überhaupt nicht dorthin. Heute wird die Wendung oft ironisch im Sinne von „genau passend“ verwendet.",
+    "example": "Die rote Mütze zum pinken Mantel passt wie die Faust aufs Auge."
+  },
+  {
+    "id": 105,
+    "text": "Ins Blaue hinein",
+    "meaning": "Ohne festen Plan oder Ziel.",
+    "origin": "Das Blau des Himmels und der Ferne steht für das Unbestimmte. Wer ins Blaue fährt, weiß nicht, wo er ankommt.",
+    "example": "Am Sonntag machen wir eine Fahrt ins Blaue."
+  },
+  {
+    "id": 106,
+    "text": "Die Kurve kriegen",
+    "meaning": "Etwas gerade noch rechtzeitig schaffen oder sich zum Besseren wenden.",
+    "origin": "Wer mit hohem Tempo in eine Kurve fährt, muss aufpassen, dass er sie noch schafft und nicht von der Straße abkommt.",
+    "example": "Nach schwachem Start hat er in der Schule doch noch die Kurve gekriegt."
+  },
+  {
+    "id": 107,
+    "text": "Etwas unter den Teppich kehren",
+    "meaning": "Etwas Unangenehmes vertuschen.",
+    "origin": "Wer Schmutz unter den Teppich kehrt, statt ihn wegzuräumen, sorgt nur dafür, dass man ihn nicht mehr sieht.",
+    "example": "Solche Fehler darf man nicht einfach unter den Teppich kehren."
+  },
+  {
+    "id": 108,
+    "text": "Jemandem reicht's bis hier",
+    "meaning": "Jemand hat endgültig genug.",
+    "origin": "Beim Sprechen zeigt man mit der Hand an den Hals oder über den Kopf – so hoch steht einem der Ärger schon.",
+    "example": "Mir reicht's bis hier mit eurem Streit!"
+  },
+  {
+    "id": 109,
+    "text": "Den Vogel abschießen",
+    "meaning": "Alle übertreffen – oft ironisch für etwas besonders Dummes.",
+    "origin": "Beim Schützenfest wird auf einen hölzernen Vogel geschossen. Wer das letzte Stück herunterschießt, wird Schützenkönig.",
+    "example": "Mit seiner Verkleidung als Riesenbanane hat er den Vogel abgeschossen."
+  },
+  {
+    "id": 110,
+    "text": "Jemandem die Show stehlen",
+    "meaning": "Mehr Aufmerksamkeit bekommen als der eigentliche Mittelpunkt.",
+    "origin": "Die Wendung ist aus dem Englischen („to steal the show“) übernommen, wo sie aus der Theaterwelt stammt.",
+    "example": "Bei der Hochzeit hat der kleine Hund allen die Show gestohlen."
+  },
+  {
+    "id": 111,
+    "text": "Sich die Zähne ausbeißen",
+    "meaning": "Trotz großer Mühe keinen Erfolg haben.",
+    "origin": "Wer an etwas Hartem nagt, das nicht nachgibt, riskiert dabei seine Zähne.",
+    "example": "An dieser Matheaufgabe beiße ich mir die Zähne aus."
+  },
+  {
+    "id": 112,
+    "text": "Die Radieschen von unten betrachten",
+    "meaning": "Tot und begraben sein (scherzhaft).",
+    "origin": "Wer im Grab liegt, sieht das Gemüse im Beet nur noch von unten.",
+    "example": "Wenn ich mal die Radieschen von unten betrachte, sollst du meine Briefmarken bekommen."
+  },
+  {
+    "id": 113,
+    "text": "Etwas ist im Eimer",
+    "meaning": "Etwas ist kaputt oder gescheitert.",
+    "origin": "Was kaputt ist, landet im Mülleimer.",
+    "example": "Der Regenschirm ist im Eimer – der Wind hat ihn umgedreht."
+  },
+  {
+    "id": 114,
+    "text": "Das Gelbe vom Ei",
+    "meaning": "Das Beste; meist verneint: „nicht das Gelbe vom Ei“.",
+    "origin": "Das Eigelb galt als der wertvollste und schmackhafteste Teil des Eis.",
+    "example": "Die neue Frisur ist auch nicht gerade das Gelbe vom Ei."
+  },
+  {
+    "id": 115,
+    "text": "Die Füße hochlegen",
+    "meaning": "Sich ausruhen, entspannen.",
+    "origin": "Mit hochgelegten Beinen erholt man sich besonders gut – ein Bild für Feierabend und Ruhe.",
+    "example": "Nach dem Umzug haben wir endlich mal die Füße hochgelegt."
+  },
+  {
+    "id": 116,
+    "text": "Jemanden auf dem Kieker haben",
+    "meaning": "Jemanden ständig kritisch beobachten oder nicht leiden können.",
+    "origin": "„Kieker“ ist ein norddeutsches Wort für Fernglas. Wen man durch das Fernglas beobachtet, hat man genau im Blick.",
+    "example": "Der Hausmeister hat uns auf dem Kieker, seit der Ball im Fenster gelandet ist."
+  },
+  {
+    "id": 117,
+    "text": "Etwas aufs Tapet bringen",
+    "meaning": "Ein Thema zur Sprache bringen.",
+    "origin": "„Tapet“ kommt vom französischen „tapis“ (Teppich, Tischdecke). Was auf den Verhandlungstisch gelegt wurde, kam zur Beratung.",
+    "example": "Wer hat das Thema Taschengeld schon wieder aufs Tapet gebracht?"
+  },
+  {
+    "id": 118,
+    "text": "Das Ei des Kolumbus",
+    "meaning": "Eine überraschend einfache Lösung für ein schwieriges Problem.",
+    "origin": "Kolumbus soll gezeigt haben, wie man ein Ei aufrecht hinstellt: Er drückte die Spitze leicht ein. Einfach – wenn man erst darauf kommt.",
+    "example": "Die Klammer am Kabel war das Ei des Kolumbus – nie wieder Kabelsalat."
+  }
+]
