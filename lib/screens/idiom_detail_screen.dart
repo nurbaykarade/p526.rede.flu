@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
 import '../models/idiom.dart';
+import 'share_screen.dart';
 
 class IdiomDetailScreen extends StatelessWidget {
   const IdiomDetailScreen({super.key, required this.idiom});
@@ -19,9 +20,20 @@ class IdiomDetailScreen extends StatelessWidget {
         title: const Text('Redewendung'),
         actions: [
           IconButton(
+            tooltip: 'Als Bild teilen',
+            icon: const Icon(Icons.ios_share),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) => ShareScreen(idiom: idiom),
+              ),
+            ),
+          ),
+          IconButton(
             tooltip: fav ? 'Aus Favoriten entfernen' : 'Zu Favoriten',
-            icon: Icon(fav ? Icons.favorite : Icons.favorite_border,
-                color: fav ? theme.colorScheme.error : null),
+            icon: Icon(
+              fav ? Icons.favorite : Icons.favorite_border,
+              color: fav ? theme.colorScheme.error : null,
+            ),
             onPressed: () => scope.state.toggleFavorite(idiom.id),
           ),
         ],
@@ -37,8 +49,16 @@ class IdiomDetailScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-          _Section(icon: Icons.lightbulb_outline, title: 'Bedeutung', text: idiom.meaning),
-          _Section(icon: Icons.history_edu_outlined, title: 'Herkunft', text: idiom.origin),
+          _Section(
+            icon: Icons.lightbulb_outline,
+            title: 'Bedeutung',
+            text: idiom.meaning,
+          ),
+          _Section(
+            icon: Icons.history_edu_outlined,
+            title: 'Herkunft',
+            text: idiom.origin,
+          ),
           _Section(
             icon: Icons.format_quote,
             title: 'Beispiel',
@@ -76,11 +96,13 @@ class _Section extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(children: [
-              Icon(icon, size: 20, color: theme.colorScheme.primary),
-              const SizedBox(width: 8),
-              Text(title, style: theme.textTheme.titleMedium),
-            ]),
+            Row(
+              children: [
+                Icon(icon, size: 20, color: theme.colorScheme.primary),
+                const SizedBox(width: 8),
+                Text(title, style: theme.textTheme.titleMedium),
+              ],
+            ),
             const SizedBox(height: 8),
             Text(
               text,

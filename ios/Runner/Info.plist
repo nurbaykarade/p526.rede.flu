@@ -72,5 +72,7 @@
 	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Damit du Redewendungen als Bild in deinen Fotos sichern kannst.</string>
 </dict>
 </plist>

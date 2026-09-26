@@ -4,6 +4,7 @@ import '../app_scope.dart';
 import '../util/german_date.dart';
 import '../widgets/idiom_tile.dart';
 import 'history_screen.dart';
+import 'share_screen.dart';
 
 class TodayScreen extends StatelessWidget {
   const TodayScreen({super.key});
@@ -21,9 +22,12 @@ class TodayScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.all(20),
       children: [
-        Text(formatGermanDate(now),
-            style: theme.textTheme.titleMedium
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+        Text(
+          formatGermanDate(now),
+          style: theme.textTheme.titleMedium?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
+        ),
         const SizedBox(height: 4),
         Text('Redewendung des Tages', style: theme.textTheme.headlineSmall),
         const SizedBox(height: 16),
@@ -48,8 +52,9 @@ class TodayScreen extends StatelessWidget {
                   const SizedBox(height: 12),
                   Text(
                     idiom.meaning,
-                    style: theme.textTheme.titleMedium
-                        ?.copyWith(color: theme.colorScheme.onPrimaryContainer),
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      color: theme.colorScheme.onPrimaryContainer,
+                    ),
                   ),
                   const SizedBox(height: 16),
                   Row(
@@ -62,11 +67,29 @@ class TodayScreen extends StatelessWidget {
                           label: const Text('Mehr erfahren'),
                         ),
                       ),
-                      IconButton(
-                        tooltip: fav ? 'Aus Favoriten entfernen' : 'Zu Favoriten',
-                        icon: Icon(fav ? Icons.favorite : Icons.favorite_border,
-                            color: fav ? theme.colorScheme.error : null),
-                        onPressed: () => state.toggleFavorite(idiom.id),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(
+                            tooltip: 'Als Bild teilen',
+                            icon: const Icon(Icons.ios_share),
+                            onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute<void>(
+                                builder: (_) => ShareScreen(idiom: idiom),
+                              ),
+                            ),
+                          ),
+                          IconButton(
+                            tooltip: fav
+                                ? 'Aus Favoriten entfernen'
+                                : 'Zu Favoriten',
+                            icon: Icon(
+                              fav ? Icons.favorite : Icons.favorite_border,
+                              color: fav ? theme.colorScheme.error : null,
+                            ),
+                            onPressed: () => state.toggleFavorite(idiom.id),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -89,7 +112,9 @@ class TodayScreen extends StatelessWidget {
                 icon: const Icon(Icons.history),
                 label: const Text('Ganzer Verlauf'),
                 onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute<void>(builder: (_) => const HistoryScreen()),
+                  MaterialPageRoute<void>(
+                    builder: (_) => const HistoryScreen(),
+                  ),
                 ),
               ),
             ),
@@ -113,11 +138,16 @@ class _EnableNotificationsCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(children: [
-              const Icon(Icons.lock_clock_outlined),
-              const SizedBox(width: 8),
-              Text('Auf dem Sperrbildschirm', style: theme.textTheme.titleMedium),
-            ]),
+            Row(
+              children: [
+                const Icon(Icons.lock_clock_outlined),
+                const SizedBox(width: 8),
+                Text(
+                  'Auf dem Sperrbildschirm',
+                  style: theme.textTheme.titleMedium,
+                ),
+              ],
+            ),
             const SizedBox(height: 8),
             const Text(
               'Erlaube Mitteilungen, damit die Redewendung des Tages '
