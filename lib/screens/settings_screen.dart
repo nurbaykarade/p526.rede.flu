@@ -218,7 +218,7 @@ class SettingsScreen extends StatelessWidget {
         const AboutListTile(
           icon: Icon(Icons.info_outline),
           applicationName: 'Redewendix',
-          applicationVersion: '1.0.0',
+          applicationVersion: '1.1.0',
           applicationLegalese: 'Jeden Tag eine deutsche Redewendung.',
         ),
       ],
