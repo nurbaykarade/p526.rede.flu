@@ -4,11 +4,44 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../models/idiom.dart';
 
+/// Zusätzliches Paket (Pro) – nicht Teil der täglichen Redewendungen.
+class IdiomPack {
+  const IdiomPack({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.idioms,
+  });
+
+  final String id;
+  final String title;
+  final String description;
+  final List<Idiom> idioms;
+
+  factory IdiomPack.fromJson(Map<String, dynamic> json) => IdiomPack(
+    id: json['id'] as String,
+    title: json['title'] as String,
+    description: json['description'] as String,
+    idioms: (json['idioms'] as List)
+        .cast<Map<String, dynamic>>()
+        .map(Idiom.fromJson)
+        .toList(growable: false),
+  );
+}
+
 class IdiomRepository {
-  IdiomRepository(this._idioms) : _byId = {for (final i in _idioms) i.id: i};
+  IdiomRepository(this._idioms, {this.packs = const []})
+    : _byId = {
+        for (final i in _idioms) i.id: i,
+        for (final p in packs)
+          for (final i in p.idioms) i.id: i,
+      };
 
   final List<Idiom> _idioms;
   final Map<int, Idiom> _byId;
+
+  /// Zusatz-Pakete (Pro).
+  final List<IdiomPack> packs;
 
   static Future<IdiomRepository> load() async {
     final raw = await rootBundle.loadString('assets/idioms.json');
@@ -16,10 +49,27 @@ class IdiomRepository {
         .cast<Map<String, dynamic>>()
         .map(Idiom.fromJson)
         .toList(growable: false);
-    return IdiomRepository(list);
+    final index =
+        (jsonDecode(await rootBundle.loadString('assets/packs/index.json'))
+                as List)
+            .cast<String>();
+    final packs = [
+      for (final file in index)
+        IdiomPack.fromJson(
+          jsonDecode(await rootBundle.loadString('assets/packs/$file'))
+              as Map<String, dynamic>,
+        ),
+    ];
+    return IdiomRepository(list, packs: packs);
   }
 
+  /// Die täglichen Redewendungen (ohne Pakete).
   List<Idiom> get all => _idioms;
+
+  /// Tägliche Redewendungen und alle Pakete, alphabetisch – für Favoriten.
+  List<Idiom> get sortedWithPacks =>
+      [..._idioms, for (final p in packs) ...p.idioms]
+        ..sort((a, b) => a.text.toLowerCase().compareTo(b.text.toLowerCase()));
 
   List<Idiom> get sorted =>
       [..._idioms]

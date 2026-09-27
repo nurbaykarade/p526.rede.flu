@@ -9,7 +9,7 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scope = AppScope.of(context);
-    final favs = scope.repo.sorted
+    final favs = scope.repo.sortedWithPacks
         .where((i) => scope.state.isFavorite(i.id))
         .toList();
 

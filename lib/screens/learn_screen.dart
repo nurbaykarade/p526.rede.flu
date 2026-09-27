@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
 import '../services/quiz.dart';
+import 'pack_screen.dart';
 import 'pro_screen.dart';
 import 'quiz_screen.dart';
 
@@ -43,6 +44,18 @@ class LearnScreen extends StatelessWidget {
             label: const Text('Mit Pro freischalten'),
             onPressed: () => ProScreen.open(context),
           ),
+          if (scope.repo.packs.isNotEmpty) ...[
+            const SizedBox(height: 32),
+            Text('Zusatz-Pakete mit Pro', style: theme.textTheme.titleMedium),
+            for (final pack in scope.repo.packs)
+              ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Icons.lock_outline),
+                title: Text(pack.title),
+                subtitle: Text('${pack.idioms.length} Redewendungen'),
+                onTap: () => ProScreen.open(context),
+              ),
+          ],
         ],
       );
     }
@@ -136,6 +149,26 @@ class LearnScreen extends StatelessWidget {
             );
           },
         ),
+        if (scope.repo.packs.isNotEmpty) ...[
+          const SizedBox(height: 24),
+          Text('Zusatz-Pakete', style: theme.textTheme.titleMedium),
+          for (final pack in scope.repo.packs)
+            ListTile(
+              contentPadding: EdgeInsets.zero,
+              leading: Icon(
+                Icons.library_books_outlined,
+                color: theme.colorScheme.primary,
+              ),
+              title: Text(pack.title),
+              subtitle: Text('${pack.idioms.length} Redewendungen'),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => PackScreen(pack: pack),
+                ),
+              ),
+            ),
+        ],
       ],
     );
   }
