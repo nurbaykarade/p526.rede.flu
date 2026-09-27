@@ -84,6 +84,10 @@ class AdService extends ChangeNotifier {
         notifyListeners();
         return;
       }
+      // App ab 12: nur jugendfreie Anzeigen.
+      await MobileAds.instance.updateRequestConfiguration(
+        RequestConfiguration(maxAdContentRating: MaxAdContentRating.pg),
+      );
       await MobileAds.instance.initialize();
       _ready = true;
       _loadInterstitial();
