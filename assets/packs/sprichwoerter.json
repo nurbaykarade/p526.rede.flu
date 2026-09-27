@@ -1,0 +1,287 @@
+{
+  "id": "sprichwoerter",
+  "title": "Sprichwörter",
+  "description": "Bekannte deutsche Sprichwörter – ganze Sätze voller Lebensweisheit, mit Bedeutung und Herkunft.",
+  "idioms": [
+    {
+      "id": 1001,
+      "text": "Morgenstund hat Gold im Mund",
+      "meaning": "Wer früh aufsteht, schafft viel und hat Erfolg.",
+      "origin": "Vermutlich angelehnt an den lateinischen Spruch „Aurora musis amica“ (Die Morgenröte ist der Freund der Musen). Das Bild vom Gold im Mund ist nicht sicher gedeutet.",
+      "example": "Schon um sieben im Büro? Na ja, Morgenstund hat Gold im Mund."
+    },
+    {
+      "id": 1002,
+      "text": "Wer anderen eine Grube gräbt, fällt selbst hinein",
+      "meaning": "Wer anderen schaden will, schadet am Ende oft sich selbst.",
+      "origin": "Das Sprichwort stammt aus der Bibel: „Wer eine Grube gräbt, der fällt hinein“ (Sprüche 26,27; ähnlich Prediger 10,8).",
+      "example": "Er wollte mich beim Chef anschwärzen und flog selbst auf – wer anderen eine Grube gräbt …"
+    },
+    {
+      "id": 1003,
+      "text": "Der Apfel fällt nicht weit vom Stamm",
+      "meaning": "Kinder ähneln in Eigenschaften oder Verhalten ihren Eltern.",
+      "origin": "Das Bild ist naheliegend: Reife Äpfel fallen meist direkt unter den Baum, von dem sie stammen. Ähnliche Sprichwörter gibt es in vielen Sprachen.",
+      "example": "Sie ist genauso stur wie ihr Vater – der Apfel fällt eben nicht weit vom Stamm."
+    },
+    {
+      "id": 1004,
+      "text": "Übung macht den Meister",
+      "meaning": "Wer etwas oft übt, wird darin mit der Zeit richtig gut.",
+      "origin": "Das Bild stammt aus dem Handwerk: Meister wurde man erst nach langer Lehr- und Gesellenzeit, also durch viel Übung und Erfahrung.",
+      "example": "Die Tonleiter klappt noch nicht? Keine Sorge, Übung macht den Meister."
+    },
+    {
+      "id": 1005,
+      "text": "Ohne Fleiß kein Preis",
+      "meaning": "Wer Erfolg haben will, muss sich dafür anstrengen.",
+      "origin": "„Preis“ steht hier für Lohn oder Belohnung. Die Herkunft ist nicht genau bekannt; der eingängige Reim hat den Spruch populär gemacht.",
+      "example": "Jeden Abend Vokabeln lernen nervt, aber ohne Fleiß kein Preis."
+    },
+    {
+      "id": 1006,
+      "text": "Lügen haben kurze Beine",
+      "meaning": "Mit Lügen kommt man nicht weit, sie werden bald entdeckt.",
+      "origin": "Die Herkunft ist nicht sicher geklärt. Das Bild: Wer kurze Beine hat, kommt nicht weit und wird schnell eingeholt – so wie ein Lügner.",
+      "example": "Du hast doch gesagt, du warst krank? Lügen haben kurze Beine – ich hab dein Foto vom Konzert gesehen."
+    },
+    {
+      "id": 1007,
+      "text": "Hochmut kommt vor dem Fall",
+      "meaning": "Wer überheblich ist, erlebt oft bald einen Misserfolg.",
+      "origin": "Das Sprichwort stammt aus der Bibel: „Wer zugrunde gehen soll, der wird zuvor stolz; und Hochmut kommt vor dem Fall“ (Sprüche 16,18).",
+      "example": "Er hat schon vor dem Finale gefeiert und dann verloren. Hochmut kommt vor dem Fall."
+    },
+    {
+      "id": 1008,
+      "text": "Aller Anfang ist schwer",
+      "meaning": "Neue Dinge fallen zu Beginn meist schwer, später wird es leichter.",
+      "origin": "Der Gedanke ist sehr alt und in vielen Sprachen verbreitet; auf Latein lautet er „Omne initium difficile est“.",
+      "example": "Mein erster Tag im neuen Job war chaotisch, aber aller Anfang ist schwer."
+    },
+    {
+      "id": 1009,
+      "text": "Wer zuletzt lacht, lacht am besten",
+      "meaning": "Wer sich zu früh freut, kann am Ende doch der Verlierer sein.",
+      "origin": "Die Herkunft ist nicht sicher geklärt. Das Sprichwort gibt es ähnlich in vielen Sprachen, etwa im Französischen „Rira bien qui rira le dernier“.",
+      "example": "Lacht ruhig über mein altes Rad – wer zuletzt lacht, lacht am besten."
+    },
+    {
+      "id": 1010,
+      "text": "Viele Köche verderben den Brei",
+      "meaning": "Wenn zu viele mitreden, wird das Ergebnis schlechter.",
+      "origin": "Das Bild stammt aus der Küche: Wenn jeder würzt und umrührt, wie er will, misslingt das Essen. Im Englischen heißt es ähnlich „Too many cooks spoil the broth“.",
+      "example": "Zehn Leute an einer Präsentation? Viele Köche verderben den Brei."
+    },
+    {
+      "id": 1011,
+      "text": "Der frühe Vogel fängt den Wurm",
+      "meaning": "Wer früh dran ist, hat bessere Chancen als andere.",
+      "origin": "Vermutlich aus dem Englischen übernommen („The early bird catches the worm“). Das Bild: Vögel, die früh auf Futtersuche gehen, finden am meisten.",
+      "example": "Ich stehe um sechs vor dem Laden, der frühe Vogel fängt den Wurm!"
+    },
+    {
+      "id": 1012,
+      "text": "Reden ist Silber, Schweigen ist Gold",
+      "meaning": "Manchmal ist es klüger zu schweigen, als etwas zu sagen.",
+      "origin": "Das Sprichwort wurde im 19. Jahrhundert weit bekannt. Der Gedanke, dass Schweigen oft klüger ist als Reden, findet sich schon in viel älteren Spruchsammlungen.",
+      "example": "Sag bei dem Streit lieber nichts – Reden ist Silber, Schweigen ist Gold."
+    },
+    {
+      "id": 1013,
+      "text": "Wer rastet, der rostet",
+      "meaning": "Wer sich nicht bewegt oder übt, verliert seine Fähigkeiten.",
+      "origin": "Das Bild stammt von Werkzeugen aus Eisen: Liegen sie ungenutzt herum, setzen sie Rost an. So geht es auch Körper und Geist.",
+      "example": "Meine Oma geht mit 80 noch jeden Tag schwimmen. Sie sagt: „Wer rastet, der rostet.“"
+    },
+    {
+      "id": 1014,
+      "text": "Wie man sich bettet, so liegt man",
+      "meaning": "Wie es einem geht, hängt von den eigenen Entscheidungen ab.",
+      "origin": "Das Bild ist einfach: Wer sein Bett sorgfältig macht, schläft bequem. Wer schlampt, liegt schlecht – übertragen auf das ganze Leben.",
+      "example": "Du hast nie gespart und bist jetzt pleite? Tja, wie man sich bettet, so liegt man."
+    },
+    {
+      "id": 1015,
+      "text": "Hunde, die bellen, beißen nicht",
+      "meaning": "Wer laut droht, macht seine Drohungen selten wahr.",
+      "origin": "Das Sprichwort beruht auf der Beobachtung, dass laut bellende Hunde oft eher ängstlich sind und selten wirklich zubeißen.",
+      "example": "Keine Angst vor dem Nachbarn, der schimpft nur. Hunde, die bellen, beißen nicht."
+    },
+    {
+      "id": 1016,
+      "text": "Es ist nicht alles Gold, was glänzt",
+      "meaning": "Was gut aussieht, ist nicht unbedingt auch gut oder wertvoll.",
+      "origin": "Der Gedanke ist schon im Mittelalter belegt und in vielen Sprachen verbreitet. Bekannt ist auch Shakespeares Fassung „All that glisters is not gold“.",
+      "example": "Das Handy ist schick, aber der Akku hält nur einen halben Tag. Es ist nicht alles Gold, was glänzt."
+    },
+    {
+      "id": 1017,
+      "text": "Kleinvieh macht auch Mist",
+      "meaning": "Auch kleine Beträge oder Beiträge summieren sich.",
+      "origin": "Das Bild stammt vom Bauernhof: Nicht nur Kühe und Pferde, auch Hühner und Kaninchen liefern Mist, der als Dünger wertvoll ist.",
+      "example": "Ich werfe jeden Tag meine Münzen ins Sparschwein. Kleinvieh macht auch Mist!"
+    },
+    {
+      "id": 1018,
+      "text": "Was Hänschen nicht lernt, lernt Hans nimmermehr",
+      "meaning": "Was man als Kind nicht lernt, lernt man später nur schwer.",
+      "origin": "„Hänschen“ ist die Verkleinerungsform von Hans und steht für das Kind, „Hans“ für den Erwachsenen. Das Sprichwort ist seit Jahrhunderten verbreitet.",
+      "example": "Fang ruhig jetzt mit dem Klavier an – was Hänschen nicht lernt, lernt Hans nimmermehr."
+    },
+    {
+      "id": 1019,
+      "text": "Wer A sagt, muss auch B sagen",
+      "meaning": "Wer etwas anfängt, muss es auch zu Ende führen.",
+      "origin": "Das Bild stammt vom Alphabet: Wer mit A beginnt, sollte auch mit B weitermachen, also die Folgen seines ersten Schritts tragen.",
+      "example": "Du hast den Hund gewollt, jetzt gehst du auch Gassi. Wer A sagt, muss auch B sagen."
+    },
+    {
+      "id": 1020,
+      "text": "Wer nicht wagt, der nicht gewinnt",
+      "meaning": "Ohne Mut und Risiko erreicht man nichts.",
+      "origin": "Der Gedanke ist sehr alt; ähnlich heißt es schon auf Latein „Audentes fortuna iuvat“ (Den Mutigen hilft das Glück).",
+      "example": "Bewirb dich doch einfach auf die Stelle! Wer nicht wagt, der nicht gewinnt."
+    },
+    {
+      "id": 1021,
+      "text": "Den Letzten beißen die Hunde",
+      "meaning": "Wer zu spät kommt oder zurückbleibt, hat den Nachteil.",
+      "origin": "Das Bild stammt vermutlich von der Jagd: Das langsamste Tier einer fliehenden Herde wird von den Jagdhunden eingeholt.",
+      "example": "Beeil dich mit der Anmeldung, die Plätze sind knapp. Den Letzten beißen die Hunde."
+    },
+    {
+      "id": 1022,
+      "text": "Ende gut, alles gut",
+      "meaning": "Wenn etwas gut ausgeht, sind frühere Probleme vergessen.",
+      "origin": "Das Sprichwort ist alt und schon lange vor Shakespeare belegt. Seine Komödie „All's Well That Ends Well“ heißt auf Deutsch „Ende gut, alles gut“.",
+      "example": "Der Flug war verspätet, aber wir haben den Anschluss noch geschafft. Ende gut, alles gut!"
+    },
+    {
+      "id": 1023,
+      "text": "Gut Ding will Weile haben",
+      "meaning": "Was gut werden soll, braucht seine Zeit.",
+      "origin": "Die Form „gut Ding“ ohne Endung ist eine ältere Sprachform. Das Sprichwort ist seit Jahrhunderten verbreitet.",
+      "example": "Der Kuchen braucht noch zwanzig Minuten. Gut Ding will Weile haben."
+    },
+    {
+      "id": 1024,
+      "text": "Wer den Pfennig nicht ehrt, ist des Talers nicht wert",
+      "meaning": "Wer kleine Beträge nicht schätzt, verdient auch keine großen.",
+      "origin": "Der Pfennig war eine kleine Münze, der Taler eine große Silbermünze, die in deutschen Ländern jahrhundertelang im Umlauf war.",
+      "example": "Heb den Cent ruhig auf! Wer den Pfennig nicht ehrt, ist des Talers nicht wert."
+    },
+    {
+      "id": 1025,
+      "text": "Eine Schwalbe macht noch keinen Sommer",
+      "meaning": "Ein einzelnes gutes Zeichen bedeutet noch keine echte Wende.",
+      "origin": "Der Gedanke geht auf Aristoteles zurück, der in der „Nikomachischen Ethik“ schreibt, dass eine Schwalbe noch keinen Frühling macht.",
+      "example": "Ein gutes Quartal ist schön, aber eine Schwalbe macht noch keinen Sommer."
+    },
+    {
+      "id": 1026,
+      "text": "Stille Wasser sind tief",
+      "meaning": "Ruhige Menschen haben oft mehr in sich, als man denkt.",
+      "origin": "Das Bild stammt aus der Natur: Tiefe Gewässer fließen oft ruhig, während seichte Bäche plätschern und rauschen.",
+      "example": "Tim sagt kaum was, aber er hat einen Roman geschrieben! Stille Wasser sind tief."
+    },
+    {
+      "id": 1027,
+      "text": "Scherben bringen Glück",
+      "meaning": "Man sagt es tröstend, wenn etwas aus Versehen zerbricht.",
+      "origin": "Die Herkunft ist nicht sicher geklärt. Vermutlich hängt sie mit altem Brauchtum wie dem Geschirrzerschlagen beim Polterabend zusammen.",
+      "example": "Oh nein, die Tasse! – Macht nichts, Scherben bringen Glück."
+    },
+    {
+      "id": 1028,
+      "text": "Der Klügere gibt nach",
+      "meaning": "Wer vernünftig ist, lässt einen sinnlosen Streit fallen.",
+      "origin": "Die genaue Herkunft ist nicht bekannt. Das Sprichwort drückt die Erfahrung aus, dass Nachgeben oft klüger ist als Rechthaberei.",
+      "example": "Okay, dann eben Pizza statt Sushi. Der Klügere gibt nach."
+    },
+    {
+      "id": 1029,
+      "text": "Was du heute kannst besorgen, das verschiebe nicht auf morgen",
+      "meaning": "Man soll Aufgaben sofort erledigen und nicht aufschieben.",
+      "origin": "Ähnliche Ratschläge sind seit Jahrhunderten in vielen Sprachen verbreitet. Die gereimte deutsche Fassung prägt sich besonders gut ein.",
+      "example": "Mach die Steuererklärung doch gleich – was du heute kannst besorgen, das verschiebe nicht auf morgen."
+    },
+    {
+      "id": 1030,
+      "text": "Wer im Glashaus sitzt, sollte nicht mit Steinen werfen",
+      "meaning": "Wer selbst Fehler hat, sollte andere nicht kritisieren.",
+      "origin": "Das Bild ist anschaulich: Wer mit Steinen wirft, riskiert, dass zurückgeworfen wird – und Glas zerbricht leicht. Ähnlich heißt es im Englischen.",
+      "example": "Du nennst mich unpünktlich? Wer im Glashaus sitzt, sollte nicht mit Steinen werfen."
+    },
+    {
+      "id": 1031,
+      "text": "Man soll den Tag nicht vor dem Abend loben",
+      "meaning": "Man soll sich nicht zu früh über einen Erfolg freuen.",
+      "origin": "Das Sprichwort ist alt und in vielen Sprachen bekannt. Gemeint ist: Erst am Abend weiß man, ob der Tag wirklich gut war.",
+      "example": "Bisher läuft der Umzug super. Aber man soll den Tag nicht vor dem Abend loben."
+    },
+    {
+      "id": 1032,
+      "text": "Einem geschenkten Gaul schaut man nicht ins Maul",
+      "meaning": "Bei Geschenken soll man nicht kritisch nach Mängeln suchen.",
+      "origin": "Das Bild stammt aus dem Pferdehandel: Am Gebiss eines Pferdes erkennt man sein Alter. Bei einem Geschenk prüft man das aus Höflichkeit nicht.",
+      "example": "Das Sofa ist nicht ganz mein Stil, aber einem geschenkten Gaul schaut man nicht ins Maul."
+    },
+    {
+      "id": 1033,
+      "text": "Not macht erfinderisch",
+      "meaning": "In schwierigen Lagen findet man oft kreative Lösungen.",
+      "origin": "Der Gedanke ist sehr alt und in vielen Sprachen verbreitet, im Englischen etwa als „Necessity is the mother of invention“.",
+      "example": "Kein Korkenzieher da? Not macht erfinderisch – ein Schuh tut es auch."
+    },
+    {
+      "id": 1034,
+      "text": "Wo gehobelt wird, da fallen Späne",
+      "meaning": "Bei großen Vorhaben lassen sich kleine Schäden nicht vermeiden.",
+      "origin": "Das Bild stammt aus der Schreinerei: Beim Hobeln von Holz entstehen zwangsläufig Späne, die als Abfall zu Boden fallen.",
+      "example": "Bei der Umstellung gab es ein paar Pannen, aber wo gehobelt wird, da fallen Späne."
+    },
+    {
+      "id": 1035,
+      "text": "Besser den Spatz in der Hand als die Taube auf dem Dach",
+      "meaning": "Ein kleiner sicherer Gewinn ist besser als ein großer unsicherer.",
+      "origin": "Das Bild stammt vermutlich vom Vogelfang: Ein gefangener kleiner Spatz ist mehr wert als eine größere Taube, die noch frei auf dem Dach sitzt.",
+      "example": "Nimm das Angebot an. Besser den Spatz in der Hand als die Taube auf dem Dach."
+    },
+    {
+      "id": 1036,
+      "text": "Kommt Zeit, kommt Rat",
+      "meaning": "Mit etwas Geduld findet sich eine Lösung.",
+      "origin": "„Rat“ bedeutete früher auch „Abhilfe“ oder „Mittel“. Gemeint ist also: Mit der Zeit findet sich ein Ausweg.",
+      "example": "Ich weiß noch nicht, wie wir das bezahlen. Aber kommt Zeit, kommt Rat."
+    },
+    {
+      "id": 1037,
+      "text": "Geteiltes Leid ist halbes Leid",
+      "meaning": "Kummer ist leichter zu ertragen, wenn man ihn mit anderen teilt.",
+      "origin": "Die genaue Herkunft ist nicht bekannt. Oft wird das Sprichwort mit „Geteilte Freude ist doppelte Freude“ zusammen genannt.",
+      "example": "Komm, erzähl mir, was los ist. Geteiltes Leid ist halbes Leid."
+    },
+    {
+      "id": 1038,
+      "text": "Wer suchet, der findet",
+      "meaning": "Wer sich wirklich bemüht, erreicht sein Ziel.",
+      "origin": "Das Sprichwort stammt aus der Bibel, aus der Bergpredigt: „Denn wer da bittet, der empfängt; und wer da suchet, der findet“ (Matthäus 7,8).",
+      "example": "Da ist ja mein Schlüssel, unter dem Sofa! Wer suchet, der findet."
+    },
+    {
+      "id": 1039,
+      "text": "Der Krug geht so lange zum Brunnen, bis er bricht",
+      "meaning": "Wer ein Risiko immer wieder eingeht, scheitert irgendwann.",
+      "origin": "Das Bild stammt aus der Zeit, als man Wasser mit Tonkrügen am Brunnen holte: Irgendwann zerbricht jeder Krug.",
+      "example": "Er fährt ständig ohne Ticket. Der Krug geht so lange zum Brunnen, bis er bricht."
+    },
+    {
+      "id": 1040,
+      "text": "Wenn zwei sich streiten, freut sich der Dritte",
+      "meaning": "Vom Streit zweier Parteien profitiert oft ein Unbeteiligter.",
+      "origin": "Das Motiv ist schon aus der Fabel bekannt: Löwe und Bär kämpfen um eine Beute, bis beide erschöpft sind und der Fuchs sie davonträgt.",
+      "example": "Die Geschwister stritten um das letzte Stück Kuchen – und der Hund hat es gefressen. Wenn zwei sich streiten …"
+    }
+  ]
+}

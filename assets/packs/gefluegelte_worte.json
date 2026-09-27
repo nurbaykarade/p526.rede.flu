@@ -1,0 +1,280 @@
+{
+  "id": "gefluegelte_worte",
+  "title": "Geflügelte Worte",
+  "description": "Berühmte Zitate aus Literatur, Geschichte, Film und Werbung, die zu Redewendungen geworden sind.",
+  "idioms": [
+    {
+      "id": 2001,
+      "text": "Die Axt im Haus erspart den Zimmermann",
+      "meaning": "Wer selbst handwerklich geschickt ist, braucht keine fremde Hilfe.",
+      "origin": "Aus Friedrich Schillers Drama „Wilhelm Tell“ (1804), dritter Aufzug, erste Szene. Tell sagt den Satz, während er zu Hause am Hoftor arbeitet.",
+      "example": "Ich repariere das Regal lieber selbst – die Axt im Haus erspart den Zimmermann."
+    },
+    {
+      "id": 2002,
+      "text": "Früh übt sich, was ein Meister werden will",
+      "meaning": "Wer etwas gut können will, sollte schon in jungen Jahren damit anfangen.",
+      "origin": "Ebenfalls aus Schillers „Wilhelm Tell“ (1804), dritter Aufzug, erste Szene. Tell sagt es über seine Söhne, die mit Pfeil und Bogen üben.",
+      "example": "Die Kleine spielt schon mit vier Jahren Geige – früh übt sich, was ein Meister werden will."
+    },
+    {
+      "id": 2003,
+      "text": "Durch diese hohle Gasse muss er kommen",
+      "meaning": "Scherzhaft: Hier kommt jemand garantiert vorbei, man muss nur warten.",
+      "origin": "Beginn von Tells berühmtem Monolog in Schillers „Wilhelm Tell“ (1804), vierter Aufzug, dritte Szene, in dem er in der Gasse bei Küssnacht auf den Vogt Gessler lauert.",
+      "example": "Ich warte am Ausgang der Kantine auf den Chef – durch diese hohle Gasse muss er kommen."
+    },
+    {
+      "id": 2004,
+      "text": "Drum prüfe, wer sich ewig bindet",
+      "meaning": "Vor einer festen, langen Bindung wie der Ehe sollte man gut nachdenken.",
+      "origin": "Aus Friedrich Schillers Gedicht „Das Lied von der Glocke“ (1799). Es geht weiter: „Ob sich das Herz zum Herzen findet! Der Wahn ist kurz, die Reu ist lang.“",
+      "example": "Ihr kennt euch erst drei Monate und wollt schon heiraten? Drum prüfe, wer sich ewig bindet!"
+    },
+    {
+      "id": 2005,
+      "text": "Spät kommt ihr, doch ihr kommt",
+      "meaning": "Begrüßung für jemanden, der zwar verspätet, aber immerhin erscheint.",
+      "origin": "Erster Vers von Schillers Drama „Die Piccolomini“ (1799), dem zweiten Teil der Wallenstein-Trilogie. Illo begrüßt damit den verspäteten Isolani.",
+      "example": "Als Tom mit einer Stunde Verspätung zur Party kam, rief Lisa: „Spät kommt ihr, doch ihr kommt!“"
+    },
+    {
+      "id": 2006,
+      "text": "Mit der Dummheit kämpfen Götter selbst vergebens",
+      "meaning": "Gegen die Unvernunft anderer Leute ist man manchmal einfach machtlos.",
+      "origin": "Aus Friedrich Schillers Drama „Die Jungfrau von Orleans“ (1801), dritter Aufzug, sechste Szene. Der englische Feldherr Talbot sagt es kurz vor seinem Tod.",
+      "example": "Ich habe ihm dreimal erklärt, wie der Drucker geht – mit der Dummheit kämpfen Götter selbst vergebens."
+    },
+    {
+      "id": 2007,
+      "text": "Der Worte sind genug gewechselt",
+      "meaning": "Jetzt ist genug geredet, jetzt muss endlich gehandelt werden.",
+      "origin": "Aus Goethes „Faust I“ (1808), „Vorspiel auf dem Theater“. Der Theaterdirektor sagt: „Der Worte sind genug gewechselt, lasst mich auch endlich Taten sehn!“",
+      "example": "Wir diskutieren seit zwei Stunden über den Umzug. Der Worte sind genug gewechselt – packen wir an!"
+    },
+    {
+      "id": 2008,
+      "text": "Da steh ich nun, ich armer Tor",
+      "meaning": "Trotz aller Mühe ist man kein bisschen schlauer als vorher.",
+      "origin": "Aus Fausts erstem Monolog in Goethes „Faust I“ (1808), Szene „Nacht“. Weiter heißt es: „Und bin so klug als wie zuvor!“",
+      "example": "Drei Tutorials habe ich geschaut, und da steh ich nun, ich armer Tor, und verstehe immer noch nichts."
+    },
+    {
+      "id": 2009,
+      "text": "Zwei Seelen wohnen, ach, in meiner Brust",
+      "meaning": "Man ist innerlich hin- und hergerissen zwischen zwei Wünschen.",
+      "origin": "Aus Goethes „Faust I“ (1808), Szene „Vor dem Tor“. Faust beschreibt damit gegenüber Wagner seinen Zwiespalt zwischen irdischer Lust und geistigem Streben.",
+      "example": "Sofa oder Fitnessstudio? Zwei Seelen wohnen, ach, in meiner Brust."
+    },
+    {
+      "id": 2010,
+      "text": "Die Botschaft hör ich wohl, allein mir fehlt der Glaube",
+      "meaning": "Man hört zwar, was versprochen wird, glaubt aber nicht so recht daran.",
+      "origin": "Aus Goethes „Faust I“ (1808), Szene „Nacht“. Faust sagt es, als er die Osterglocken und den Chor hört, der die Auferstehung verkündet.",
+      "example": "Der Handwerker kommt angeblich morgen früh – die Botschaft hör ich wohl, allein mir fehlt der Glaube."
+    },
+    {
+      "id": 2011,
+      "text": "Name ist Schall und Rauch",
+      "meaning": "Ein Name oder eine Bezeichnung ist unwichtig, es kommt auf die Sache an.",
+      "origin": "Aus Goethes „Faust I“ (1808), Szene „Marthens Garten“. Faust antwortet so auf Gretchens Frage, wie er es mit der Religion halte.",
+      "example": "Ob das Gericht nun Ragout oder Eintopf heißt – Name ist Schall und Rauch, Hauptsache, es schmeckt."
+    },
+    {
+      "id": 2012,
+      "text": "Die Geister, die ich rief",
+      "meaning": "Man wird die Folgen einer selbst ausgelösten Sache nicht mehr los.",
+      "origin": "Nach Goethes Ballade „Der Zauberlehrling“ (1797). Im Original heißt es: „Die ich rief, die Geister, werd ich nun nicht los.“ Die gängige Form ist also leicht umgestellt.",
+      "example": "Ich habe den Nachbarskindern einmal Kekse gegeben, jetzt klingeln sie täglich – die Geister, die ich rief."
+    },
+    {
+      "id": 2013,
+      "text": "Man merkt die Absicht und ist verstimmt",
+      "meaning": "Man durchschaut, was jemand bezweckt, und ist deshalb verärgert.",
+      "origin": "Nach Goethes Drama „Torquato Tasso“ (1790), zweiter Aufzug, erste Szene. Im Original sagt Tasso: „So fühlt man Absicht, und man ist verstimmt.“",
+      "example": "Er lobt mein Kochen nur, wenn er Geld leihen will – man merkt die Absicht und ist verstimmt."
+    },
+    {
+      "id": 2014,
+      "text": "Warum in die Ferne schweifen?",
+      "meaning": "Das Gute und Schöne findet man oft ganz in der Nähe.",
+      "origin": "Frei nach Goethes Gedicht „Erinnerung“ (um 1789): „Willst du immer weiter schweifen? Sieh, das Gute liegt so nah.“ Die gängige Frageform ist eine Abwandlung.",
+      "example": "Statt nach Mallorca fahren wir an den Baggersee – warum in die Ferne schweifen?"
+    },
+    {
+      "id": 2015,
+      "text": "Sein oder Nichtsein, das ist hier die Frage",
+      "meaning": "Scherzhaft vor einer wichtigen Entscheidung, bei der viel auf dem Spiel steht.",
+      "origin": "Aus Shakespeares „Hamlet“ (um 1600), dritter Akt, erste Szene: „To be, or not to be“. Die deutsche Fassung stammt aus der Übersetzung von August Wilhelm Schlegel (1798).",
+      "example": "Pizza oder Pasta – sein oder Nichtsein, das ist hier die Frage."
+    },
+    {
+      "id": 2016,
+      "text": "Etwas ist faul im Staate Dänemark",
+      "meaning": "Hier stimmt etwas nicht, es gibt verdächtige Unstimmigkeiten.",
+      "origin": "Aus Shakespeares „Hamlet“ (um 1600), erster Akt, vierte Szene. Der Offizier Marcellus sagt „Something is rotten in the state of Denmark“.",
+      "example": "Alle tuscheln und verstummen, wenn ich reinkomme – etwas ist faul im Staate Dänemark."
+    },
+    {
+      "id": 2017,
+      "text": "Ist es auch Wahnsinn, so hat es doch Methode",
+      "meaning": "Etwas wirkt verrückt, folgt aber einem erkennbaren Plan.",
+      "origin": "Aus Shakespeares „Hamlet“ (um 1600), zweiter Akt, zweite Szene. Polonius sagt es beiseite über Hamlets scheinbar wirres Gerede.",
+      "example": "Er sortiert seine Bücher nach Farben – ist es auch Wahnsinn, so hat es doch Methode."
+    },
+    {
+      "id": 2018,
+      "text": "Mein Königreich für ein Pferd",
+      "meaning": "Man würde alles dafür geben, jetzt ein bestimmtes Ding zu bekommen.",
+      "origin": "Aus Shakespeares „Richard III.“ (um 1593), fünfter Akt, vierte Szene. Der König ruft in der Schlacht „A horse! a horse! my kingdom for a horse!“",
+      "example": "Nach der Wanderung dachte ich nur: Mein Königreich für eine kalte Limo!"
+    },
+    {
+      "id": 2019,
+      "text": "Gut gebrüllt, Löwe",
+      "meaning": "Anerkennung für eine treffende, selbstbewusste Äußerung.",
+      "origin": "Aus Shakespeares Komödie „Ein Sommernachtstraum“ (um 1595), fünfter Akt, erste Szene. Ein Zuschauer lobt so den Handwerker, der im Theaterstück den Löwen spielt.",
+      "example": "„Ich lasse mir das nicht mehr gefallen!“, sagte Jana. „Gut gebrüllt, Löwe“, meinte ihr Bruder."
+    },
+    {
+      "id": 2020,
+      "text": "Ich kam, sah und siegte",
+      "meaning": "Etwas wurde schnell und mühelos erledigt oder gewonnen.",
+      "origin": "Lateinisch „Veni, vidi, vici“. Julius Cäsar meldete so 47 v. Chr. seinen raschen Sieg bei Zela über König Pharnakes II., überliefert von Plutarch und Sueton.",
+      "example": "Er ging zum ersten Mal zum Quizabend und gewann sofort – ich kam, sah und siegte."
+    },
+    {
+      "id": 2021,
+      "text": "Die Würfel sind gefallen",
+      "meaning": "Eine Entscheidung ist getroffen und lässt sich nicht mehr rückgängig machen.",
+      "origin": "Laut Sueton sagte Cäsar 49 v. Chr. am Rubikon „Alea iacta est“. Nach Plutarch zitierte er auf Griechisch einen Dichtervers, sinngemäß „Der Würfel soll geworfen sein“.",
+      "example": "Ich habe den Mietvertrag unterschrieben – die Würfel sind gefallen."
+    },
+    {
+      "id": 2022,
+      "text": "Auch du, Brutus?",
+      "meaning": "Vorwurf an einen Vertrauten, von dem man sich verraten fühlt.",
+      "origin": "Nach Cäsars Ermordung 44 v. Chr. Ob er das sagte, ist unsicher. Sueton erwähnt das griechische „Auch du, Kind?“, „Et tu, Brute?“ stammt aus Shakespeares „Julius Caesar“ (1599).",
+      "example": "Du hast auch für das andere Team gestimmt? Auch du, Brutus?"
+    },
+    {
+      "id": 2023,
+      "text": "Ich weiß, dass ich nichts weiß",
+      "meaning": "Bescheidenes Eingeständnis, dass das eigene Wissen sehr begrenzt ist.",
+      "origin": "Wird Sokrates zugeschrieben. Die knappe Formel ist aber eine Zuspitzung: In Platons „Apologie“ sagt Sokrates nur, er glaube nicht zu wissen, was er nicht weiß.",
+      "example": "Je mehr ich über Wein lese, desto klarer wird mir: Ich weiß, dass ich nichts weiß."
+    },
+    {
+      "id": 2024,
+      "text": "Brot und Spiele",
+      "meaning": "Die Leute mit Essen und Unterhaltung zufriedenstellen und ablenken.",
+      "origin": "Lateinisch „panem et circenses“. Der römische Dichter Juvenal spottet in seiner 10. Satire (um 100 n. Chr.), das Volk wünsche sich nur noch diese zwei Dinge.",
+      "example": "Gratis-Würstchen und ein Konzert beim Firmenfest – Brot und Spiele, damit keiner über Gehälter redet."
+    },
+    {
+      "id": 2025,
+      "text": "Nach mir die Sintflut",
+      "meaning": "Was nach einem selbst passiert, ist einem völlig gleichgültig.",
+      "origin": "Französisch „Après nous le déluge“ („Nach uns die Sintflut“). Wird Madame de Pompadour oder Ludwig XV. um 1757 zugeschrieben; die Herkunft ist nicht sicher belegt.",
+      "example": "Er feiert bis zum Morgen und lässt das Chaos liegen – nach mir die Sintflut."
+    },
+    {
+      "id": 2026,
+      "text": "Und sie bewegt sich doch",
+      "meaning": "Trotz aller Widerstände bleibt man bei einer Wahrheit.",
+      "origin": "Italienisch „Eppur si muove“, angeblich von Galileo Galilei 1633 nach seinem Widerruf gesagt. Das ist eine Legende: Der Satz ist erst 1757 gedruckt belegt.",
+      "example": "Alle hielten die alte Kaffeemaschine für kaputt, aber Opa drückte zweimal – und sie bewegt sich doch."
+    },
+    {
+      "id": 2027,
+      "text": "Hier stehe ich, ich kann nicht anders",
+      "meaning": "Man bleibt bei seiner Überzeugung, auch wenn es Nachteile bringt.",
+      "origin": "Wird Martin Luther beim Reichstag zu Worms 1521 zugeschrieben. Die Worte fehlen aber in den Protokollen und stammen wohl aus einem frühen Druck seiner Rede.",
+      "example": "Ich esse kein Fleisch, auch nicht auf deiner Grillparty – hier stehe ich, ich kann nicht anders."
+    },
+    {
+      "id": 2028,
+      "text": "Wissen ist Macht",
+      "meaning": "Wer gut informiert ist, hat einen Vorteil gegenüber anderen.",
+      "origin": "Geht auf den englischen Philosophen Francis Bacon zurück, der 1597 in den „Meditationes Sacrae“ schrieb: „ipsa scientia potestas est“ (Wissen selbst ist Macht).",
+      "example": "Lies vor der Gehaltsverhandlung nach, was andere verdienen – Wissen ist Macht."
+    },
+    {
+      "id": 2029,
+      "text": "Der Mensch ist, was er isst",
+      "meaning": "Die Ernährung prägt Gesundheit und Wesen eines Menschen.",
+      "origin": "Vom Philosophen Ludwig Feuerbach, der 1850 in einer Besprechung von Jakob Moleschotts „Lehre der Nahrungsmittel“ schrieb: „Der Mensch ist, was er ißt.“",
+      "example": "Seit ich mehr Gemüse esse, habe ich viel mehr Energie – der Mensch ist, was er isst."
+    },
+    {
+      "id": 2030,
+      "text": "Ich bin ein Berliner",
+      "meaning": "Ausdruck von Solidarität oder Verbundenheit mit einem Ort oder einer Gruppe.",
+      "origin": "Sagte US-Präsident John F. Kennedy am 26. Juni 1963 in seiner Rede vor dem Rathaus Schöneberg in West-Berlin, auf Deutsch, als Zeichen der Solidarität.",
+      "example": "Nach zehn Jahren in Hamburg sage ich stolz: Ich bin ein Hamburger – frei nach „Ich bin ein Berliner“."
+    },
+    {
+      "id": 2031,
+      "text": "Wer zu spät kommt, den bestraft das Leben",
+      "meaning": "Wer nicht rechtzeitig handelt, muss mit den Nachteilen leben.",
+      "origin": "Wird Michail Gorbatschow beim Besuch in Ost-Berlin im Oktober 1989 zugeschrieben. Der Satz ist aber eine deutsche Paraphrase, wohl von seinem Sprecher Gennadi Gerassimow.",
+      "example": "Die Konzertkarten waren nach zehn Minuten weg – wer zu spät kommt, den bestraft das Leben."
+    },
+    {
+      "id": 2032,
+      "text": "Erst kommt das Fressen, dann kommt die Moral",
+      "meaning": "Grundbedürfnisse wie Hunger gehen vor, erst danach kommen Prinzipien.",
+      "origin": "Aus Bertolt Brechts „Dreigroschenoper“ (1928), aus dem Lied „Denn wovon lebt der Mensch?“ im zweiten Dreigroschenfinale, Musik von Kurt Weill.",
+      "example": "Vor der Diskussion bestellen wir Pizza – erst kommt das Fressen, dann kommt die Moral."
+    },
+    {
+      "id": 2033,
+      "text": "Es gibt nichts Gutes, außer man tut es",
+      "meaning": "Gute Absichten allein nützen nichts, man muss auch handeln.",
+      "origin": "Von Erich Kästner. Das Epigramm trägt den Titel „Moral“ und erschien in seinem Sammelband „Kurz und bündig“ (1950).",
+      "example": "Statt über den Müll im Park zu schimpfen, sammeln wir ihn auf – es gibt nichts Gutes, außer man tut es."
+    },
+    {
+      "id": 2034,
+      "text": "Schau mir in die Augen, Kleines",
+      "meaning": "Scherzhaft-zärtliche Aufforderung, jemanden direkt anzusehen.",
+      "origin": "Aus der deutschen Synchronfassung (1952) des Films „Casablanca“ (1942). Humphrey Bogart sagt im Original „Here's looking at you, kid“ – die Übersetzung ist also frei.",
+      "example": "Bevor er die Frage stellte, sagte er lachend: „Schau mir in die Augen, Kleines.“"
+    },
+    {
+      "id": 2035,
+      "text": "Houston, wir haben ein Problem",
+      "meaning": "Scherzhafte Meldung, dass etwas schiefgelaufen ist.",
+      "origin": "Nach dem Funkspruch der Apollo-13-Crew im April 1970. Wörtlich hieß es „Houston, we've had a problem“; berühmt wurde die Form aus dem Film „Apollo 13“ (1995).",
+      "example": "Houston, wir haben ein Problem: Der Kuchen ist im Ofen und der Strom ist weg."
+    },
+    {
+      "id": 2036,
+      "text": "Möge die Macht mit dir sein",
+      "meaning": "Scherzhafter Glückwunsch vor einer schwierigen Aufgabe.",
+      "origin": "Aus dem Film „Krieg der Sterne“ (1977) von George Lucas, im Original „May the Force be with you“. Der Satz fällt in der Reihe immer wieder.",
+      "example": "Morgen hast du die Führerscheinprüfung? Möge die Macht mit dir sein!"
+    },
+    {
+      "id": 2037,
+      "text": "Ich bin dann mal weg",
+      "meaning": "Lockerer Abschied, wenn man geht oder eine Auszeit nimmt.",
+      "origin": "Die Wendung war schon vorher umgangssprachlich, wurde aber 2006 durch Hape Kerkelings Bestseller „Ich bin dann mal weg“ über seine Pilgerreise auf dem Jakobsweg berühmt.",
+      "example": "So, der Urlaubsantrag ist durch – ich bin dann mal weg!"
+    },
+    {
+      "id": 2038,
+      "text": "Er läuft und läuft und läuft",
+      "meaning": "Etwas funktioniert zuverlässig und ausdauernd, ohne je kaputtzugehen.",
+      "origin": "Werbeslogan für den VW Käfer aus den 1960er-Jahren. Er betonte die sprichwörtliche Zuverlässigkeit des Autos und wurde bald auf alles Mögliche übertragen.",
+      "example": "Meine alte Waschmaschine ist zwanzig Jahre alt – sie läuft und läuft und läuft."
+    },
+    {
+      "id": 2039,
+      "text": "Da werden Sie geholfen",
+      "meaning": "Scherzhaft, bewusst falsch: Hier bekommt man die gesuchte Hilfe.",
+      "origin": "Aus einem Werbespot für die Telefonauskunft 11880 von Telegate um das Jahr 2000. Verona Feldbusch sagte den grammatisch falschen Satz, der sofort Kult wurde.",
+      "example": "Dein Fahrrad hat einen Platten? Komm zu mir, da werden Sie geholfen!"
+    }
+  ]
+}
